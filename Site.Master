@@ -1,0 +1,250 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="SOSiQ.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <style>
+.dropbtn {
+  background-color: rgb(34 34 34);
+  color: rgb(157 157 157);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+</style>
+
+
+    <title><%: Page.Title %>SOSiQ</title>
+
+
+
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">SOSiQ</a>
+                </div>
+                <div class="navbar-collapse collapse">
+
+
+                    <div class="dropdown">
+                      <button class="dropbtn">Time</button>
+                      <div class="dropdown-content">
+                        <a href="/TimeManagement/TimeClock">Clock in/out</a>
+                        <a href="/TimeManagement/TimeOff">Request time off</a>
+                        <a href="/TimeManagement/WorkLog">View work log</a>
+                        <a href="/TimeManagement/PayPeriod">View Pay periods</a>
+
+                      </div>
+
+                    </div>
+
+                    <div class="dropdown">
+                      <button class="dropbtn">Work Order</button>
+                      <div class="dropdown-content">
+                        <a href="/WorkOrders/Management/Create">Create</a>
+                        <a href="/WorkOrders/Management/WorkOrders">Edit</a>
+                        <a href="/WorkOrders/ClockWorkOrder">Clock on/off</a>
+                        <a href="/WorkOrders/Queue">Queue</a>
+                      </div>
+                    </div>
+
+                    
+                    <div class="dropdown">
+                      <button class="dropbtn">Invoice</button>
+                      <div class="dropdown-content">
+                        <a href="/Invoices/CreateInvoice">Create</a>
+                        <a href="/Invoices/Invoices">Edit</a>
+                      </div>
+                    </div>
+
+                                        
+                    <div class="dropdown">
+                      <button class="dropbtn">Reports</button>
+                      <div class="dropdown-content">
+                        <a href="/Reports/Performance">Performance</a>
+                        <a href="/Reports/CarHistory">Car History</a>
+                        <a href="/Reports/LocalDashboard">Site Stats</a>
+                      </div>
+                    </div>
+
+                    <div class="dropdown">
+                      <button class="dropbtn">Users</button>
+                      <div class="dropdown-content">
+                          <a href="/UserManagement/CreateUserWizardWithRoles.aspx">Create User</a>
+                          <a href="/UserManagement/ChangeEmail.aspx">Change Email</a>
+                          <a href="/UserManagement/UsersAndRoles.aspx">Users And Roles</a>
+                          <a href="/UserManagement/ManageRoles.aspx">Manage Roles</a>
+                          <a href="/UserManagement/ViewAllUsers.aspx">View All Users</a>
+                          <a href="/UserManagement/UserAndEmployeeManagement.aspx">Manage Users and Employees</a>
+                      </div>
+                    </div>
+
+                    <div class="dropdown">
+                      <button class="dropbtn">Team</button>
+                      <div class="dropdown-content">
+                          <a href="/Team/AddNew.aspx">Add New</a>
+                          <a href="/Team/Update.aspx">Update Existing</a>
+                          <a href="/Team/ViewTeam">View team</a>
+                          <a href="/Team/TeamPayTable">Team Pay</a>
+                          <a href="/Team/ClockStatusByEmployee">Team Clock Status</a>
+                          <a href="/Team/TimeClockUpdate">Update Team Member Punch</a>
+                          <a href="/Team/WorkOrdersInProcess">Work Orders in process</a>
+                      </div>
+                    </div>
+
+                    
+
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Default">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                              <div class="dropdown">
+                                  <button class="dropbtn"><asp:LoginName ID="LoginName1" runat="server" /></button>
+                                  <div class="dropdown-content">
+                                    <a href="/Time/Clocking"><asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Default.aspx" /></a>
+                                    <a href="/Global/ManageAccount.aspx">Change Password</a>
+                                    
+                                  </div>
+                               </div>
+                             </ul>
+                
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+
+
+
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+
+           
+         
+
+              <table>
+               <tr>
+                   <td>
+                       <asp:Image ID="imgLogo" runat="server" CssClass="img-responsive" Height="37px" ImageUrl="~/SOSCT Logo (2).png" />
+
+                       &nbsp 
+                   </td>
+                <td>&nbsp &copy; <%: DateTime.Now.Year %> - SOSiQ, An SOS CLEANTEAM Product </td>
+
+                <td width="20px"></td>
+                               
+
+
+                <td style="height: 20px">
+                
+                    <asp:Label ID="lblSiteName" runat="server" Visible="False"></asp:Label>
+                    
+                </td>
+                <td> </td>
+                <td style="height: 20px">
+
+
+                    <asp:Label ID="lblSiteID" runat="server" Visible="False"></asp:Label>
+
+                </td>
+                    <td> </td>
+                <td style="height: 20px">
+
+
+                    <asp:Label ID="lblEmpId" runat="server" Visible="False"></asp:Label>
+
+
+                </td>
+
+
+            </tr>
+              </table>
+                   
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
