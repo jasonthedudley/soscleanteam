@@ -155,25 +155,25 @@
 
     Protected Sub cbSelect_CheckedChanged(sender As Object, e As EventArgs)
 
-        Dim dTotal As Decimal = 0
+        'Dim dTotal As Decimal = 0
 
-        For Each row As GridViewRow In gvInvoices.Rows
+        'For Each row As GridViewRow In gvInvoices.Rows
 
-            If row.RowType = DataControlRowType.DataRow Then
+        '    If row.RowType = DataControlRowType.DataRow Then
 
-                Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
+        '        Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
 
-                If cbRow.Checked Then
-                    dTotal += CDec(row.Cells(14).Text)
+        '        If cbRow.Checked Then
+        '            dTotal += CDec(row.Cells(14).Text)
 
-                End If
+        '        End If
 
 
-            End If
+        '    End If
 
-        Next
+        'Next
 
-        lblSelectionTotal.Text = dTotal
+        'lblSelectionTotal.Text = dTotal
 
     End Sub
 
@@ -213,4 +213,32 @@
         Response.[End]()
     End Sub
 
+    Protected Sub gvInvoices_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles gvInvoices.RowEditing
+        gvInvoices.EditIndex = e.NewEditIndex
+
+    End Sub
+
+    Protected Sub btnSubtotal_Click(sender As Object, e As EventArgs) Handles btnSubtotal.Click
+
+        Dim dTotal As Decimal = 0
+
+        For Each row As GridViewRow In gvInvoices.Rows
+
+            If row.RowType = DataControlRowType.DataRow Then
+
+                Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
+
+                If cbRow.Checked Then
+                    dTotal += CDec(row.Cells(13).Text)
+
+                End If
+
+
+            End If
+
+        Next
+
+        lblSelectionTotal.Text = dTotal
+
+    End Sub
 End Class

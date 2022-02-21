@@ -6,17 +6,29 @@
 
     
     <hr />
-    <table CssClass="table-condensed" >
+    <table CssClass="table-condensed" style="padding: 10px; margin: 10px;">
         <tr>
-            <th>Date Paid:</th>
-            <td><asp:TextBox ID="txtDatePaid" runat="server" TextMode="Date"></asp:TextBox></td>
-            <th>Check Amount:</th>
-            <td><asp:TextBox ID="txtAmount" runat="server"></asp:TextBox></td>
+            <th style="height: 22px">Date Paid:</th>
+            <td style="height: 22px"><asp:TextBox ID="txtDatePaid" runat="server" TextMode="Date"></asp:TextBox></td>
+            <th style="text-align:right";"height: 22px">Check Amount:</th>
+            <td style="height: 22px"><asp:TextBox ID="txtAmount" runat="server"></asp:TextBox></td>
         </tr>
+     
+
         <tr>
-                <td colspan="2"><asp:Button ID="btnMarkPaid" runat="server" Text="Mark Selected Invoices As Paid" Font-Size="Small" /></td>        
+            <td></td>
+            <td style="text-align: right">
+                <asp:Button ID="btnSubtotal" runat="server" Text="Calculate Total" />
+            </td>
                 <th>Selected Invoices Total:</th>
                 <td><asp:Label ID="lblSelectionTotal" runat="server" Text=""></asp:Label></td>
+        </tr>
+
+           <tr>
+               <td></td>
+               <td></td>
+                <td colspan="2" style="text-align: right"><asp:Button ID="btnMarkPaid" runat="server" Text="Mark Selected Invoices As Paid" Font-Size="Small" /></td>        
+
 
         </tr>
         </table>

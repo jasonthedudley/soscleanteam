@@ -32,13 +32,13 @@ Partial Public Class Invoices
     Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnMarkPaid control.
+    '''btnSubtotal control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnMarkPaid As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnSubtotal As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblSelectionTotal control.
@@ -48,6 +48,15 @@ Partial Public Class Invoices
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblSelectionTotal As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''btnMarkPaid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnMarkPaid As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''txtDateBegin control.
