@@ -3,14 +3,17 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        If Not IsPostBack Then
+            gvInvoices.DataBind()
+        End If
+
     End Sub
 
     Public Sub UpdateInvoice()
 
         Response.Write("<script LANGUAGE='JavaScript' >alert('Updated')</script>")
-
-
         Response.Redirect(Request.RawUrl)
+
     End Sub
 
     Protected Sub btnPrintInvoice_Click(sender As Object, e As EventArgs) Handles btnPrintInvoice.Click
@@ -23,7 +26,7 @@
 
                 Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
                 If cbRow.Checked Then
-                    iInvoiceNumber = row.Cells(2).Text
+                    iInvoiceNumber = row.Cells(1).Text
                     Exit For
                 End If
 
@@ -215,6 +218,7 @@
 
     Protected Sub gvInvoices_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles gvInvoices.RowEditing
         gvInvoices.EditIndex = e.NewEditIndex
+        gvInvoices.DataBind()
 
     End Sub
 
@@ -239,6 +243,47 @@
         Next
 
         lblSelectionTotal.Text = dTotal
+
+    End Sub
+
+    Protected Sub gvInvoices_RowCancelingEdit(sender As Object, e As GridViewCancelEditEventArgs) Handles gvInvoices.RowCancelingEdit
+        gvInvoices.EditIndex = -1
+    End Sub
+
+    Protected Sub btnEditSelected_Click(sender As Object, e As EventArgs) Handles btnEditSelected.Click
+
+        Dim bSelected As Boolean = False
+
+        'LAUNCHES A PAGE THAT EDITS THE SELECTED WORK ORDER
+        Dim iInvoiceID As Integer = Nothing
+
+        For Each row As GridViewRow In gvInvoices.Rows
+
+            If row.RowType = DataControlRowType.DataRow Then
+
+                Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
+                If cbRow.Checked Then
+                    iInvoiceID = row.Cells(1).Text
+                    bSelected = True
+                    Exit For
+                End If
+
+
+            End If
+
+        Next
+
+
+        Dim sPageURL As String = "/invoices/EditInvoice?InvoiceID="
+
+        'open invoice in new tab and refreshes the page with the list of orders ready to invoice
+
+        If bSelected = True Then
+            Page.ClientScript.RegisterClientScriptBlock(GetType(Page), "SCRIPT", "window.open('" & sPageURL & iInvoiceID & "','','');window.location = 'Invoices.aspx';", True)
+
+        Else
+            Response.Write("<script LANGUAGE='JavaScript' >alert('Select Invoice Before Clicking Edit')</script>")
+        End If
 
     End Sub
 End Class

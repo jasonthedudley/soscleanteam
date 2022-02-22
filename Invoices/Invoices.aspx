@@ -62,6 +62,10 @@
         <hr />  
         <table>
             <tr>
+                <td><asp:Button ID="btnEditSelected" runat="server" Text="Edit Selected" /></td>
+                <td width="30px">&nbsp</td>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
                 <td><asp:Button ID="btnSelectAll" runat="server" Text="Select All" /></td>
                 <td width="30px">&nbsp</td>
                 <td>&nbsp</td>
@@ -88,13 +92,13 @@
     <div id="GridView" style="overflow:scroll">
         <asp:GridView ID="gvInvoices" runat="server" AutoGenerateColumns="False" CssClass="table-condensed" 
             DataKeyNames="InvoiceNumber" DataSourceID="odsUpdatingInvoice" BackColor="White" BorderColor="#999999" 
-            BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AutoGenerateEditButton="True" AllowSorting="True">
+            BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" AllowSorting="True">
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
             
                  <asp:templatefield HeaderText="Select">
                     <itemtemplate>
-                        <asp:checkbox ID="cbSelect" CssClass="gridCB" runat="server" AutoPostBack="True" OnCheckedChanged="cbSelect_CheckedChanged"></asp:checkbox>
+                        <asp:checkbox ID="cbSelect" CssClass="gridCB" runat="server" OnCheckedChanged="cbSelect_CheckedChanged"></asp:checkbox>
                     </itemtemplate>
                 </asp:templatefield>
                 

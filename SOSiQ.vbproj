@@ -209,6 +209,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Invoices\CreateInvoice.aspx" />
+    <Content Include="Invoices\EditInvoice.aspx" />
     <Content Include="Invoices\Invoice.aspx" />
     <Content Include="Invoices\Invoices.aspx" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
@@ -537,6 +538,13 @@
     <Compile Include="Invoices\CreateInvoice.aspx.vb">
       <DependentUpon>CreateInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoices\EditInvoice.aspx.designer.vb">
+      <DependentUpon>EditInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\EditInvoice.aspx.vb">
+      <DependentUpon>EditInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Invoices\Invoice.aspx.designer.vb">
       <DependentUpon>Invoice.aspx</DependentUpon>
