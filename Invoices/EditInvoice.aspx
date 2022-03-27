@@ -104,6 +104,13 @@
 
 
 
-
+     <script type="text/javascript">
+        function RefreshParent() {
+            if (window.opener != null && !window.opener.closed) {
+                window.opener.location.reload();
+            }
+        }
+        window.onbeforeunload = RefreshParent;
+     </script>
 
 </asp:Content>

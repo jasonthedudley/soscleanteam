@@ -54,7 +54,7 @@
 
                 cbRow.Checked = True
 
-                dTotal += CDec(row.Cells(13).Text)
+                dTotal += CDec(row.Cells(12).Text)
 
 
             End If
@@ -101,7 +101,7 @@
 
                         Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
                         If cbRow.Checked Then
-                            taInvoiceUpdater.MarkInvoicesAsPaid(CInt(row.Cells(2).Text), txtDatePaid.Text)
+                            taInvoiceUpdater.MarkInvoicesAsPaid(CInt(row.Cells(1).Text), txtDatePaid.Text)
 
                         End If
 
@@ -206,7 +206,7 @@
         Next
         sBuilder.Append(vbCr & vbLf)
         For i As Integer = 0 To gvInvoices.Rows.Count - 1
-            For k As Integer = 2 To gvInvoices.HeaderRow.Cells.Count - 1
+            For k As Integer = 1 To gvInvoices.HeaderRow.Cells.Count - 1
                 sBuilder.Append(gvInvoices.Rows(i).Cells(k).Text.Replace(",", "") + ",")
             Next
             sBuilder.Append(vbCr & vbLf)
@@ -233,7 +233,7 @@
                 Dim cbRow As CheckBox = TryCast(row.Cells(0).FindControl("cbSelect"), CheckBox)
 
                 If cbRow.Checked Then
-                    dTotal += CDec(row.Cells(13).Text)
+                    dTotal += CDec(row.Cells(12).Text)
 
                 End If
 
@@ -286,4 +286,8 @@
         End If
 
     End Sub
+
+
+
+
 End Class
