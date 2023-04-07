@@ -45,6 +45,7 @@ Public Class FinancialReports
 
 
 
+
             For Each group In groups
                 Dim siteName As String = group.site
                 Dim year As Integer = group.year
@@ -52,9 +53,9 @@ Public Class FinancialReports
 
                 ' Create a new series for each site and year combination
                 Dim series As New Series With {
-                    .Name = seriesName,
-                    .ChartType = SeriesChartType.Line
-                }
+        .Name = seriesName,
+        .ChartType = SeriesChartType.Line
+    }
                 Chart1.Series.Add(series)
 
                 ' Loop through each row in the group and add a data point to the series
@@ -66,6 +67,28 @@ Public Class FinancialReports
                     series.Points.AddXY(month, invoicesAmount)
                 Next
             Next
+
+            'For Each group In groups
+            '    Dim siteName As String = group.site
+            '    Dim year As Integer = group.year
+            '    Dim seriesName As String = siteName & " - " & year
+
+            '    ' Create a new series for each site and year combination
+            '    Dim series As New Series With {
+            '        .Name = seriesName,
+            '        .ChartType = SeriesChartType.Line
+            '    }
+            '    Chart1.Series.Add(series)
+
+            '    ' Loop through each row in the group and add a data point to the series
+            '    For Each row In group.Group
+            '        Dim month As Integer = row.Field(Of Integer)("Month")
+            '        Dim invoicesAmount As Decimal = row.Field(Of Decimal)("InvoicesAmount")
+
+            '        ' Add the data point to the series with the corresponding site and year
+            '        series.Points.AddXY(month, invoicesAmount)
+            '    Next
+            'Next
 
 
             'Next
