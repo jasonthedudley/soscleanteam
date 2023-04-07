@@ -8,7 +8,9 @@
 </div>
 <hr />
 
-                <asp:Chart ID="Chart1" runat="server" Width="800" Height="400">
+    <div style="font-size: 30px; font-weight: bold;">
+
+                <asp:Chart ID="Chart1" runat="server" Width="1200" Height="720" >
                     <Series>
                     </Series>
                     <ChartAreas>
@@ -22,7 +24,7 @@
 
                     </Legends>
                 </asp:Chart>
-
+        </div>
 
 <hr />
 </asp:Content>
