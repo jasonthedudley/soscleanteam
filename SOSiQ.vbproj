@@ -54,6 +54,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -352,13 +353,16 @@
     <Content Include="packages\Newtonsoft.Json.12.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
     <Content Include="packages\WebGrease.1.6.0\lib\WebGrease.dll" />
     <Content Include="packages\WebGrease.1.6.0\tools\WG.EXE" />
+    <Content Include="Reports\Financials\FinancialReports.aspx" />
     <Content Include="Reports\GlobalDashboard.aspx" />
     <Content Include="Reports\LocalDashboard.aspx" />
+    <Content Include="Reports\OpenInvoices\OpenInvoices.aspx" />
     <Content Include="Reports\Performance.aspx" />
     <Content Include="SOSCT Logo %282%29.png" />
     <Content Include="Team\ClockStatusByEmployee.aspx" />
     <Content Include="Team\WorkOrdersInProcess.aspx" />
     <Content Include="UserManagement\UserAndEmployeeManagement.aspx" />
+    <Content Include="WorkOrders\Management\MultiOrder.aspx" />
     <Content Include="WorkOrders\Queue.aspx" />
     <Content Include="Reports\CarHistory.aspx" />
     <Content Include="Team\AddNew.aspx" />
@@ -480,6 +484,7 @@
     <Content Include="packages\WebGrease.1.6.0\.signature.p7s" />
     <Content Include="packages\WebGrease.1.6.0\WebGrease.1.6.0.nupkg" />
     <Content Include="Reports\Web.config" />
+    <Content Include="Reports\OpenInvoices\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Global\GlobalDefault.aspx" />
     <Content Include="Recover.aspx" />
@@ -561,6 +566,13 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.vb" />
+    <Compile Include="Reports\Financials\FinancialReports.aspx.designer.vb">
+      <DependentUpon>FinancialReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Financials\FinancialReports.aspx.vb">
+      <DependentUpon>FinancialReports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Reports\GlobalDashboard.aspx.designer.vb">
       <DependentUpon>GlobalDashboard.aspx</DependentUpon>
     </Compile>
@@ -575,12 +587,22 @@
       <DependentUpon>LocalDashboard.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Reports\OpenInvoices\OpenInvoices.aspx.designer.vb">
+      <DependentUpon>OpenInvoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OpenInvoices\OpenInvoices.aspx.vb">
+      <DependentUpon>OpenInvoices.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Reports\Performance.aspx.designer.vb">
       <DependentUpon>Performance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\Performance.aspx.vb">
       <DependentUpon>Performance.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SOSiQsqlDB.vb">
+      <DependentUpon>SOSiQsqlDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="Team\ClockStatusByEmployee.aspx.designer.vb">
       <DependentUpon>ClockStatusByEmployee.aspx</DependentUpon>
@@ -601,6 +623,13 @@
     </Compile>
     <Compile Include="UserManagement\UserAndEmployeeManagement.aspx.vb">
       <DependentUpon>UserAndEmployeeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WorkOrders\Management\MultiOrder.aspx.designer.vb">
+      <DependentUpon>MultiOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkOrders\Management\MultiOrder.aspx.vb">
+      <DependentUpon>MultiOrder.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="WorkOrders\Queue.aspx.designer.vb">

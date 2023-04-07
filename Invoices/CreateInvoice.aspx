@@ -40,8 +40,8 @@
                     <asp:BoundField DataField="StockNumber" HeaderText="Stock No" SortExpression="StockNumber" />
                     <asp:BoundField DataField="RoNumber" HeaderText="Ro No" SortExpression="RoNumber" />
                     <asp:BoundField DataField="ServiceName" HeaderText="Service" SortExpression="ServiceName" />
-                    <asp:BoundField DataField="Qty" HeaderText="Qty" SortExpression="Qty" />
                     <asp:BoundField DataField="ServicePrice" HeaderText="Service Price" SortExpression="ServicePrice" DataFormatString="{0:C2}" />
+                    <asp:CheckBoxField DataField="'Panel Buff @ $20/panel'" HeaderText="Add Panel Buff @ $20/panel" SortExpression="'Panel Buff @ $20/panel'" />
                     <asp:BoundField DataField="Adder" DataFormatString="{0:C2}" HeaderText="Adder" SortExpression="Adder" />
                     <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total" DataFormatString="{0:C2}" />
                     <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />

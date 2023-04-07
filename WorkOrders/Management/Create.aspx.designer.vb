@@ -14,24 +14,6 @@ Option Explicit On
 Partial Public Class Create
 
     '''<summary>
-    '''btnCreateWorkOrder control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnCreateWorkOrder As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btnCancel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''lblVIN control.
     '''</summary>
     '''<remarks>
@@ -158,24 +140,6 @@ Partial Public Class Create
     Protected WithEvents odsServices As Global.System.Web.UI.WebControls.ObjectDataSource
 
     '''<summary>
-    '''CbDelivery control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents CbDelivery As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
-    '''lblIncludeDelivery control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblIncludeDelivery As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblPrice control.
     '''</summary>
     '''<remarks>
@@ -201,6 +165,33 @@ Partial Public Class Create
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dsPriceLookup As Global.System.Web.UI.WebControls.ObjectDataSource
+
+    '''<summary>
+    '''CbDelivery control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CbDelivery As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''cbPanelBuff control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbPanelBuff As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''lblAdderCharge control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblAdderCharge As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''PanelBuffPriceMultiplierRow control.
@@ -264,6 +255,24 @@ Partial Public Class Create
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cbAllEmployees As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''btnCreateWorkOrder control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCreateWorkOrder As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''gvVinHistory control.

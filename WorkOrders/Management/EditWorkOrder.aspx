@@ -3,7 +3,7 @@
 
 <br />
  
-    <asp:FormView ID="fvEditWorkOrder" runat="server" DataSourceID="odsEditWorkOrder" DefaultMode="Edit" Width="75%" >
+    <asp:FormView ID="fvEditWorkOrder" runat="server" DataSourceID="odsEditWorkOrder" DefaultMode="Edit" Width="75%" class="form-group">
         <EditItemTemplate>
             <table>
                 <tr>
@@ -61,6 +61,13 @@
                     <td><asp:CheckBox ID="cbDeliveryIncluded" runat="server" />  </td>
                      
                 </tr>
+                <tr>
+                    <th>Include panel buff</th>
+                    <td>&nbsp</td>
+                    <td>
+                        <asp:CheckBox ID="cbIncludePanelBuff" runat="server" /></td>
+                </tr>
+
 
                 <tr>
 
@@ -70,7 +77,7 @@
                      <th>Qty:</th>
                      <td>&nbsp</td>
                      <td>
-                         <asp:TextBox ID="txtQty" runat="server" Text='<%# Eval("Qty") %>' TextMode="Number"></asp:TextBox></td>
+                         <asp:TextBox ID="txtQty" runat="server" Text='<%# Eval("QtyOfPanelsBuffed") %>' TextMode="Number"></asp:TextBox></td>
 
 
                  </tr>

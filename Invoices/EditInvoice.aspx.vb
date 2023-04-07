@@ -23,9 +23,9 @@
 
         Try
             If dDatePaid.Text = "" Then
-                InvoiceTableAdapater.Update(iInvoiceID, iStatusID, Nothing, sNotes)
+                InvoiceTableAdapater.Update(iInvoiceID, iStatusID, Nothing, cNotes.Text)
             Else
-                InvoiceTableAdapater.Update(iInvoiceID, iStatusID, DatePaid, sNotes)
+                InvoiceTableAdapater.Update(iInvoiceID, iStatusID, DatePaid, cNotes.Text)
 
             End If
             Response.Write("<script LANGUAGE='JavaScript' >alert('Invoice updated, you can close this tab')</script>")

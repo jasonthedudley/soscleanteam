@@ -42,7 +42,7 @@ Public Class EditWorkOrder1
             Dim ddEmployee As DropDownList = fvEditWorkOrder.FindControl("ddEmployees")
             Dim cbDelivery As CheckBox = fvEditWorkOrder.FindControl("cbDeliveryIncluded")
             Dim ddRating As DropDownList = fvEditWorkOrder.FindControl("ddRating")
-
+            Dim cbPanelBuff As CheckBox = fvEditWorkOrder.FindControl("cbIncludePanelBuff")
 
             ddService.SelectedIndex = ddService.Items.IndexOf(ddService.Items.FindByValue(iServiceID))
             ddStatus.SelectedIndex = ddStatus.Items.IndexOf(ddStatus.Items.FindByValue(iStatusID))
@@ -56,9 +56,14 @@ Public Class EditWorkOrder1
                 cbDelivery.Checked = False
             End If
 
+            If dtOGdropDownData.Rows(0)(11).ToString = "True" And dtOGdropDownData.Rows(0)(11).ToString <> "" Then
+                cbPanelBuff.Checked = True
+            Else
+                cbPanelBuff.Checked = False
+
+            End If
+
         End If
-
-
 
     End Sub
 
@@ -82,16 +87,14 @@ Public Class EditWorkOrder1
 
         Dim cVIN As TextBox = fvEditWorkOrder.FindControl("vintextbox")
         Dim cCreateDate As TextBox = fvEditWorkOrder.FindControl("CreateDateTextBox")
-        Dim cCompleteDate As TextBox = fvEditWorkOrder.FindControl("CompleteDateTextBox")
-        Dim dCompleteDate As Date = "08/27/2021" 'ccompletedate.text
         Dim cQty As TextBox = fvEditWorkOrder.FindControl("txtQty")
         Dim cStockNo As TextBox = fvEditWorkOrder.FindControl("txtStockNumber")
         Dim cRoNo As TextBox = fvEditWorkOrder.FindControl("RoNumberTextBox")
         Dim cNotes As TextBox = fvEditWorkOrder.FindControl("txtNotes")
         Dim cbDelivery As CheckBox = fvEditWorkOrder.FindControl("cbDeliveryIncluded")
+        Dim cbPanelBuff As CheckBox = fvEditWorkOrder.FindControl("cbIncludePanelBuff")
         Dim cMileage As TextBox = fvEditWorkOrder.FindControl("txtMileage")
         Dim iMileage As Integer = CInt(cMileage.Text)
-
 
         iOrderID = Request.QueryString("OrderID")
 
@@ -102,7 +105,7 @@ Public Class EditWorkOrder1
 
 
         Try
-            WorkOrderAdapter.Update(iOrderID, cVIN.Text, iServiceID, iQty, cStockNo.Text, cRoNo.Text, iStatusID, iEmpID, CDate(cCreateDate.Text).ToShortDateString, CDate(dCompleteDate).ToShortDateString, cNotes.Text, cbDelivery.Checked, iMileage, iRatingID)
+            WorkOrderAdapter.Update(iOrderID, cVIN.Text, iServiceID, iQty, cStockNo.Text, cRoNo.Text, iStatusID, iEmpID, CDate(cCreateDate.Text).ToShortDateString, Nothing, cNotes.Text, cbDelivery.Checked, iMileage, iRatingID, cbPanelBuff.Checked)
 
             Response.Write("<script LANGUAGE='JavaScript' >alert('Work Order Updated')</script>")
 
@@ -114,7 +117,7 @@ Public Class EditWorkOrder1
         End Try
 
 
-        Response.Redirect("~/WorkOrders/Management/WorkOrders.aspx")
+        Page.ClientScript.RegisterClientScriptBlock(Page.GetType(), "Close", "window.close()", True)
 
 
     End Sub
@@ -124,6 +127,6 @@ Public Class EditWorkOrder1
     End Sub
 
     Protected Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Response.Redirect("/WorkOrders/Management/WorkOrders.aspx")
+        Page.ClientScript.RegisterClientScriptBlock(Page.GetType(), "Close", "window.close()", True)
     End Sub
 End Class

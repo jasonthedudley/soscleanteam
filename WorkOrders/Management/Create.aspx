@@ -8,27 +8,13 @@
      
          <table>
 
-                <tr>
-                   
-                    <td>&nbsp</td>
-                    <td>
-                        <asp:Button  ID="btnCreateWorkOrder" runat="server" Text="Create" CssClass="btn-lg" />
-                    </td>
-                    <td></td> 
-                    <td>
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-lg" />
-
-                    </td>
-
-
-               </tr>
              <tr>
                   <td colspan="5"><h4>Order Header</h4></td>
              </tr>
 
             </table>
 
-        <table>
+        <table class="table-condensed">
 
                <tr>
             <td>
@@ -100,17 +86,17 @@
 
     <hr />
 
-  <div id="UserInputs" class="table">
+  <div id="UserInputs" class="table-condensed">
      <h4>Service Details</h4>
-    <Table runat="server" BorderStyle="Solid" BorderWidth="1px" CellSpacing="1" CssClass="table" BackColor="White" Font-Italic="False" ForeColor="Black">
+    <Table runat="server" BorderStyle="Solid" BorderWidth="1px" CellSpacing="1" CssClass="table" BackColor="White" Font-Italic="False" ForeColor="Black" class="table">
 
      
 
-        <tr id="ServiceAndPriceRow">
+        <tr id="ServiceAndPriceRow" >
 
-            <td>
+            <th>
                 <asp:Label ID="lblService" runat="server" Text="Service: "></asp:Label>
-            </td>
+            </th>
 
             <td>
                 <asp:DropDownList ID="ddService" runat="server" DataSourceID="odsServices" DataTextField="ServiceName" DataValueField="ServiceID" AutoPostBack="True" AppendDataBoundItems="true"><asp:ListItem Value="">Make a selection...</asp:ListItem> </asp:DropDownList>
@@ -120,17 +106,15 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <br />
-               <asp:CheckBox ID="CbDelivery" runat="server" Visible="false" /> <asp:Label ID="lblIncludeDelivery" runat="server" Text="Include Delivery" Visible="false"></asp:Label>
-
 
             </td>
 
             <td style="width: 4px">
                 &nbsp;</td>
 
-            <td>
+            <th>
                 <asp:Label ID="lblPrice" runat="server" Text="Price: "></asp:Label>
-            </td>
+            </th>
 
             <td>
                     <asp:FormView ID="fvServicePrice" runat="server" DataSourceID="dsPriceLookup">
@@ -146,22 +130,35 @@
                     </asp:ObjectDataSource>
             </td>
 
+           
+        </tr>
 
+        <tr>
+            <th>Options:</th>
+            <td>
+                <asp:CheckBox ID="CbDelivery" runat="server" Visible="false" CssClass="checkbox" Text="Include Delivery" /> 
+                
+                <asp:CheckBox ID="cbPanelBuff" runat="server" AutoPostBack="True" CssClass="checkbox" Text="Include Panel Buff" />
+
+            </td>
+             <td></td>
+             <th>Additional Charges:</th>
+             <td><asp:Label ID="lblAdderCharge" runat="server" Text=""></asp:Label></td>
         </tr>
 
         <tr id="PanelBuffPriceMultiplierRow" visible="false">
 
-            <td># of Panels Buffed:</td>
-            <td>                <asp:TextBox ID="txtPriceMultiplier" runat="server" MaxLength="1" TextMode="Number" ToolTip="Only use this for Panel Buff" Width="48px">1</asp:TextBox> <asp:Button ID="btnUpdateCharge" runat="server" Text="Update" /></td>
+            <th># of Panels Buffed:</th>
+            <td>                <asp:TextBox ID="txtPriceMultiplier" runat="server" MaxLength="1" TextMode="Number" ToolTip="Only use this for Panel Buff" Width="48px">0</asp:TextBox> <asp:Button ID="btnUpdateCharge" runat="server" Text="Update" /></td>
             <td></td>
-            <td>Total Charge:</td>
+            <th>Total Charge:</th>
             <td>    <asp:Label ID="lblTotalCharge" runat="server" Text=""></asp:Label>        </td>
 
         </tr>
 
         <tr>
           
-            <td>Employee Assigned: </td>
+            <th>Employee Assigned: </th>
             <td>
                     <asp:DropDownList ID="ddEmployee" runat="server" DataSourceID="ddEmployeeOds" DataTextField="DisplayName" DataValueField="EmployeeID" AppendDataBoundItems="True"><asp:ListItem Value="">Make a selection...</asp:ListItem></asp:DropDownList>
                     <asp:ObjectDataSource ID="ddEmployeeOds" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetEmployees" TypeName="SOSiQ.SOSiQsqlDBTableAdapters.ShowMeActiveEmployeesBySiteTableAdapter">
@@ -173,14 +170,30 @@
             </td>
             <td style="width: 4px">
                     &nbsp;</td>
-              <td>
-                    All Employees?:
-            </td>
+              <th>
+                    View all Employees?:
+            </th>
             <td>
                 <asp:CheckBox ID="cbAllEmployees" runat="server" AutoPostBack="True" />
             </td>
 
         </tr>
+
+        <tr><td colspan="5">&nbsp</td></tr>
+                <tr>
+                   
+                    
+                    <td colspan="2">
+                        <asp:Button  ID="btnCreateWorkOrder" runat="server" Text="Create" CssClass="btn-lg" />
+                    </td>
+                    <td></td> 
+                    <td colspan="2">
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-lg" />
+
+                    </td>
+                    
+
+               </tr>
 
     </Table>
 </div>

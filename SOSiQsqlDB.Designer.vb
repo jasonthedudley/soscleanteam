@@ -117,6 +117,10 @@ Partial Public Class SOSiQsqlDB
     
     Private tableShowPauseReasons As ShowPauseReasonsDataTable
     
+    Private tableCorporateInvoiceView As CorporateInvoiceViewDataTable
+    
+    Private tableShowMeTheMoney As ShowMeTheMoneyDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -283,6 +287,12 @@ Partial Public Class SOSiQsqlDB
             End If
             If (Not (ds.Tables("ShowPauseReasons")) Is Nothing) Then
                 MyBase.Tables.Add(New ShowPauseReasonsDataTable(ds.Tables("ShowPauseReasons")))
+            End If
+            If (Not (ds.Tables("CorporateInvoiceView")) Is Nothing) Then
+                MyBase.Tables.Add(New CorporateInvoiceViewDataTable(ds.Tables("CorporateInvoiceView")))
+            End If
+            If (Not (ds.Tables("ShowMeTheMoney")) Is Nothing) Then
+                MyBase.Tables.Add(New ShowMeTheMoneyDataTable(ds.Tables("ShowMeTheMoney")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -763,6 +773,26 @@ Partial Public Class SOSiQsqlDB
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property CorporateInvoiceView() As CorporateInvoiceViewDataTable
+        Get
+            Return Me.tableCorporateInvoiceView
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property ShowMeTheMoney() As ShowMeTheMoneyDataTable
+        Get
+            Return Me.tableShowMeTheMoney
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -965,6 +995,12 @@ Partial Public Class SOSiQsqlDB
             End If
             If (Not (ds.Tables("ShowPauseReasons")) Is Nothing) Then
                 MyBase.Tables.Add(New ShowPauseReasonsDataTable(ds.Tables("ShowPauseReasons")))
+            End If
+            If (Not (ds.Tables("CorporateInvoiceView")) Is Nothing) Then
+                MyBase.Tables.Add(New CorporateInvoiceViewDataTable(ds.Tables("CorporateInvoiceView")))
+            End If
+            If (Not (ds.Tables("ShowMeTheMoney")) Is Nothing) Then
+                MyBase.Tables.Add(New ShowMeTheMoneyDataTable(ds.Tables("ShowMeTheMoney")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -1274,6 +1310,18 @@ Partial Public Class SOSiQsqlDB
                 Me.tableShowPauseReasons.InitVars
             End If
         End If
+        Me.tableCorporateInvoiceView = CType(MyBase.Tables("CorporateInvoiceView"),CorporateInvoiceViewDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableCorporateInvoiceView) Is Nothing) Then
+                Me.tableCorporateInvoiceView.InitVars
+            End If
+        End If
+        Me.tableShowMeTheMoney = CType(MyBase.Tables("ShowMeTheMoney"),ShowMeTheMoneyDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableShowMeTheMoney) Is Nothing) Then
+                Me.tableShowMeTheMoney.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1376,6 +1424,10 @@ Partial Public Class SOSiQsqlDB
         MyBase.Tables.Add(Me.tableShowMeTheCarHistory)
         Me.tableShowPauseReasons = New ShowPauseReasonsDataTable()
         MyBase.Tables.Add(Me.tableShowPauseReasons)
+        Me.tableCorporateInvoiceView = New CorporateInvoiceViewDataTable()
+        MyBase.Tables.Add(Me.tableCorporateInvoiceView)
+        Me.tableShowMeTheMoney = New ShowMeTheMoneyDataTable()
+        MyBase.Tables.Add(Me.tableShowMeTheMoney)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1656,6 +1708,18 @@ Partial Public Class SOSiQsqlDB
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeCorporateInvoiceView() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeShowMeTheMoney() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -1849,6 +1913,12 @@ Partial Public Class SOSiQsqlDB
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Delegate Sub ShowPauseReasonsRowChangeEventHandler(ByVal sender As Object, ByVal e As ShowPauseReasonsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub CorporateInvoiceViewRowChangeEventHandler(ByVal sender As Object, ByVal e As CorporateInvoiceViewRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub ShowMeTheMoneyRowChangeEventHandler(ByVal sender As Object, ByVal e As ShowMeTheMoneyRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -3891,8 +3961,6 @@ Partial Public Class SOSiQsqlDB
         
         Private columnNotes As Global.System.Data.DataColumn
         
-        Private columnQty As Global.System.Data.DataColumn
-        
         Private columnStatusID As Global.System.Data.DataColumn
         
         Private columnCompleteDate As Global.System.Data.DataColumn
@@ -3900,6 +3968,10 @@ Partial Public Class SOSiQsqlDB
         Private columnDelivery As Global.System.Data.DataColumn
         
         Private columnMileage As Global.System.Data.DataColumn
+        
+        Private columnPanelBuff As Global.System.Data.DataColumn
+        
+        Private columnQtyofpanelsbuffed As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -4026,14 +4098,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property QtyColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnQty
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property StatusIDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnStatusID
@@ -4061,6 +4125,22 @@ Partial Public Class SOSiQsqlDB
         Public ReadOnly Property MileageColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnMileage
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property PanelBuffColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPanelBuff
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property QtyofpanelsbuffedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnQtyofpanelsbuffed
             End Get
         End Property
         
@@ -4101,9 +4181,25 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddWorkOrderRow(ByVal InitialRatingID As Short, ByVal EmployeeID As Integer, ByVal CustomerID As Integer, ByVal CreateDate As Date, ByVal CreateTime As System.TimeSpan, ByVal VIN As String, ByVal StockNumber As String, ByVal RoNumber As String, ByVal ServiceID As Short, ByVal Notes As String, ByVal Qty As Integer, ByVal StatusID As Integer, ByVal CompleteDate As Date, ByVal Delivery As Boolean, ByVal Mileage As Integer) As WorkOrderRow
+        Public Overloads Function AddWorkOrderRow( _
+                    ByVal InitialRatingID As Short,  _
+                    ByVal EmployeeID As Integer,  _
+                    ByVal CustomerID As Integer,  _
+                    ByVal CreateDate As Date,  _
+                    ByVal CreateTime As System.TimeSpan,  _
+                    ByVal VIN As String,  _
+                    ByVal StockNumber As String,  _
+                    ByVal RoNumber As String,  _
+                    ByVal ServiceID As Short,  _
+                    ByVal Notes As String,  _
+                    ByVal StatusID As Integer,  _
+                    ByVal CompleteDate As Date,  _
+                    ByVal Delivery As Boolean,  _
+                    ByVal Mileage As Integer,  _
+                    ByVal PanelBuff As Boolean,  _
+                    ByVal Qtyofpanelsbuffed As Integer) As WorkOrderRow
             Dim rowWorkOrderRow As WorkOrderRow = CType(Me.NewRow,WorkOrderRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, InitialRatingID, EmployeeID, CustomerID, CreateDate, CreateTime, VIN, StockNumber, RoNumber, ServiceID, Notes, Qty, StatusID, CompleteDate, Delivery, Mileage}
+            Dim columnValuesArray() As Object = New Object() {Nothing, InitialRatingID, EmployeeID, CustomerID, CreateDate, CreateTime, VIN, StockNumber, RoNumber, ServiceID, Notes, StatusID, CompleteDate, Delivery, Mileage, PanelBuff, Qtyofpanelsbuffed}
             rowWorkOrderRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWorkOrderRow)
             Return rowWorkOrderRow
@@ -4143,11 +4239,12 @@ Partial Public Class SOSiQsqlDB
             Me.columnRoNumber = MyBase.Columns("RoNumber")
             Me.columnServiceID = MyBase.Columns("ServiceID")
             Me.columnNotes = MyBase.Columns("Notes")
-            Me.columnQty = MyBase.Columns("Qty")
             Me.columnStatusID = MyBase.Columns("StatusID")
             Me.columnCompleteDate = MyBase.Columns("CompleteDate")
             Me.columnDelivery = MyBase.Columns("Delivery")
             Me.columnMileage = MyBase.Columns("Mileage")
+            Me.columnPanelBuff = MyBase.Columns("PanelBuff")
+            Me.columnQtyofpanelsbuffed = MyBase.Columns("Qtyofpanelsbuffed")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4175,8 +4272,6 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnServiceID)
             Me.columnNotes = New Global.System.Data.DataColumn("Notes", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNotes)
-            Me.columnQty = New Global.System.Data.DataColumn("Qty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnQty)
             Me.columnStatusID = New Global.System.Data.DataColumn("StatusID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStatusID)
             Me.columnCompleteDate = New Global.System.Data.DataColumn("CompleteDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -4185,6 +4280,10 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnDelivery)
             Me.columnMileage = New Global.System.Data.DataColumn("Mileage", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMileage)
+            Me.columnPanelBuff = New Global.System.Data.DataColumn("PanelBuff", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPanelBuff)
+            Me.columnQtyofpanelsbuffed = New Global.System.Data.DataColumn("Qtyofpanelsbuffed", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnQtyofpanelsbuffed)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnWorkOrderID}, true))
             Me.columnWorkOrderID.AutoIncrement = true
             Me.columnWorkOrderID.AutoIncrementSeed = -1
@@ -4365,6 +4464,8 @@ Partial Public Class SOSiQsqlDB
         
         Private columnAdder As Global.System.Data.DataColumn
         
+        Private _column_Panel_Buff____20_panel_ As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -4529,6 +4630,14 @@ Partial Public Class SOSiQsqlDB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property __Panel_Buff____20_panel_Column() As Global.System.Data.DataColumn
+            Get
+                Return Me._column_Panel_Buff____20_panel_
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4581,9 +4690,10 @@ Partial Public Class SOSiQsqlDB
                     ByVal Qty As Integer,  _
                     ByVal RatingName As String,  _
                     ByVal Total As Decimal,  _
-                    ByVal Adder As Decimal) As ViewOrdersReadyForInvoiceRow
+                    ByVal Adder As Decimal,  _
+                    ByVal __Panel_Buff____20_panel_ As Boolean) As ViewOrdersReadyForInvoiceRow
             Dim rowViewOrdersReadyForInvoiceRow As ViewOrdersReadyForInvoiceRow = CType(Me.NewRow,ViewOrdersReadyForInvoiceRow)
-            Dim columnValuesArray() As Object = New Object() {CustomerID, WorkOrderID, StatusID, StatusName, CreateDate, CompleteDate, VIN, StockNumber, RoNumber, ServiceName, Notes, ServicePrice, Qty, RatingName, Total, Adder}
+            Dim columnValuesArray() As Object = New Object() {CustomerID, WorkOrderID, StatusID, StatusName, CreateDate, CompleteDate, VIN, StockNumber, RoNumber, ServiceName, Notes, ServicePrice, Qty, RatingName, Total, Adder, __Panel_Buff____20_panel_}
             rowViewOrdersReadyForInvoiceRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowViewOrdersReadyForInvoiceRow)
             Return rowViewOrdersReadyForInvoiceRow
@@ -4622,6 +4732,7 @@ Partial Public Class SOSiQsqlDB
             Me.columnRatingName = MyBase.Columns("RatingName")
             Me.columnTotal = MyBase.Columns("Total")
             Me.columnAdder = MyBase.Columns("Adder")
+            Me._column_Panel_Buff____20_panel_ = MyBase.Columns("'Panel Buff @ $20/panel'")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4659,7 +4770,10 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnTotal)
             Me.columnAdder = New Global.System.Data.DataColumn("Adder", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAdder)
-            Me.columnCustomerID.AllowDBNull = false
+            Me._column_Panel_Buff____20_panel_ = New Global.System.Data.DataColumn("'Panel Buff @ $20/panel'", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            Me._column_Panel_Buff____20_panel_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column_Panel_Buff____20_panel_")
+            Me._column_Panel_Buff____20_panel_.ExtendedProperties.Add("Generator_UserColumnName", "'Panel Buff @ $20/panel'")
+            MyBase.Columns.Add(Me._column_Panel_Buff____20_panel_)
             Me.columnWorkOrderID.AllowDBNull = false
             Me.columnStatusName.MaxLength = 50
             Me.columnVIN.MaxLength = 8
@@ -4834,6 +4948,10 @@ Partial Public Class SOSiQsqlDB
         
         Private columnRatingName As Global.System.Data.DataColumn
         
+        Private columnAdder As Global.System.Data.DataColumn
+        
+        Private columnTotal As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -4982,6 +5100,22 @@ Partial Public Class SOSiQsqlDB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property AdderColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdder
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property TotalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotal
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5018,9 +5152,25 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddCreateInvoiceRow(ByVal CustomerID As Integer, ByVal WorkOrderID As Integer, ByVal StatusID As Integer, ByVal StatusName As String, ByVal CreateDate As Date, ByVal CompleteDate As Date, ByVal VIN As String, ByVal StockNumber As String, ByVal RoNumber As String, ByVal ServiceName As String, ByVal ServicePrice As Decimal, ByVal Notes As String, ByVal Qty As Integer, ByVal RatingName As String) As CreateInvoiceRow
+        Public Overloads Function AddCreateInvoiceRow( _
+                    ByVal CustomerID As Integer,  _
+                    ByVal WorkOrderID As Integer,  _
+                    ByVal StatusID As Integer,  _
+                    ByVal StatusName As String,  _
+                    ByVal CreateDate As Date,  _
+                    ByVal CompleteDate As Date,  _
+                    ByVal VIN As String,  _
+                    ByVal StockNumber As String,  _
+                    ByVal RoNumber As String,  _
+                    ByVal ServiceName As String,  _
+                    ByVal ServicePrice As Decimal,  _
+                    ByVal Notes As String,  _
+                    ByVal Qty As Integer,  _
+                    ByVal RatingName As String,  _
+                    ByVal Adder As Decimal,  _
+                    ByVal Total As Decimal) As CreateInvoiceRow
             Dim rowCreateInvoiceRow As CreateInvoiceRow = CType(Me.NewRow,CreateInvoiceRow)
-            Dim columnValuesArray() As Object = New Object() {CustomerID, WorkOrderID, StatusID, StatusName, CreateDate, CompleteDate, VIN, StockNumber, RoNumber, ServiceName, ServicePrice, Notes, Qty, RatingName}
+            Dim columnValuesArray() As Object = New Object() {CustomerID, WorkOrderID, StatusID, StatusName, CreateDate, CompleteDate, VIN, StockNumber, RoNumber, ServiceName, ServicePrice, Notes, Qty, RatingName, Adder, Total}
             rowCreateInvoiceRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCreateInvoiceRow)
             Return rowCreateInvoiceRow
@@ -5057,6 +5207,8 @@ Partial Public Class SOSiQsqlDB
             Me.columnNotes = MyBase.Columns("Notes")
             Me.columnQty = MyBase.Columns("Qty")
             Me.columnRatingName = MyBase.Columns("RatingName")
+            Me.columnAdder = MyBase.Columns("Adder")
+            Me.columnTotal = MyBase.Columns("Total")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5090,7 +5242,10 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnQty)
             Me.columnRatingName = New Global.System.Data.DataColumn("RatingName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRatingName)
-            Me.columnCustomerID.AllowDBNull = false
+            Me.columnAdder = New Global.System.Data.DataColumn("Adder", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdder)
+            Me.columnTotal = New Global.System.Data.DataColumn("Total", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotal)
             Me.columnWorkOrderID.AllowDBNull = false
             Me.columnStatusName.MaxLength = 50
             Me.columnVIN.MaxLength = 8
@@ -5099,6 +5254,7 @@ Partial Public Class SOSiQsqlDB
             Me.columnServiceName.MaxLength = 250
             Me.columnNotes.MaxLength = 500
             Me.columnRatingName.MaxLength = 50
+            Me.columnTotal.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5767,8 +5923,6 @@ Partial Public Class SOSiQsqlDB
         
         Private columnNotes As Global.System.Data.DataColumn
         
-        Private columnQty As Global.System.Data.DataColumn
-        
         Private columnStatusName As Global.System.Data.DataColumn
         
         Private columnServiceName As Global.System.Data.DataColumn
@@ -5784,6 +5938,12 @@ Partial Public Class SOSiQsqlDB
         Private columnCustomerID As Global.System.Data.DataColumn
         
         Private columnStatusID As Global.System.Data.DataColumn
+        
+        Private columnMileage As Global.System.Data.DataColumn
+        
+        Private columnPanelBuff As Global.System.Data.DataColumn
+        
+        Private columnQtyOfPanelsBuffed As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -5894,14 +6054,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property QtyColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnQty
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property StatusNameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnStatusName
@@ -5965,6 +6117,30 @@ Partial Public Class SOSiQsqlDB
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property MileageColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMileage
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property PanelBuffColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPanelBuff
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property QtyOfPanelsBuffedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnQtyOfPanelsBuffed
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6010,7 +6186,6 @@ Partial Public Class SOSiQsqlDB
                     ByVal StockNumber As String,  _
                     ByVal RoNumber As String,  _
                     ByVal Notes As String,  _
-                    ByVal Qty As Integer,  _
                     ByVal StatusName As String,  _
                     ByVal ServiceName As String,  _
                     ByVal SiteName As String,  _
@@ -6018,9 +6193,12 @@ Partial Public Class SOSiQsqlDB
                     ByVal RatingName As String,  _
                     ByVal Delivery As Boolean,  _
                     ByVal CustomerID As Integer,  _
-                    ByVal StatusID As Integer) As ShowMeWorkOrdersBySiteToEditRow
+                    ByVal StatusID As Integer,  _
+                    ByVal Mileage As Integer,  _
+                    ByVal PanelBuff As Boolean,  _
+                    ByVal QtyOfPanelsBuffed As Integer) As ShowMeWorkOrdersBySiteToEditRow
             Dim rowShowMeWorkOrdersBySiteToEditRow As ShowMeWorkOrdersBySiteToEditRow = CType(Me.NewRow,ShowMeWorkOrdersBySiteToEditRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, CreateDate, StartDate, CompleteDate, CloseDate, VIN, StockNumber, RoNumber, Notes, Qty, StatusName, ServiceName, SiteName, LastName, RatingName, Delivery, CustomerID, StatusID}
+            Dim columnValuesArray() As Object = New Object() {Nothing, CreateDate, StartDate, CompleteDate, CloseDate, VIN, StockNumber, RoNumber, Notes, StatusName, ServiceName, SiteName, LastName, RatingName, Delivery, CustomerID, StatusID, Mileage, PanelBuff, QtyOfPanelsBuffed}
             rowShowMeWorkOrdersBySiteToEditRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowShowMeWorkOrdersBySiteToEditRow)
             Return rowShowMeWorkOrdersBySiteToEditRow
@@ -6058,7 +6236,6 @@ Partial Public Class SOSiQsqlDB
             Me.columnStockNumber = MyBase.Columns("StockNumber")
             Me.columnRoNumber = MyBase.Columns("RoNumber")
             Me.columnNotes = MyBase.Columns("Notes")
-            Me.columnQty = MyBase.Columns("Qty")
             Me.columnStatusName = MyBase.Columns("StatusName")
             Me.columnServiceName = MyBase.Columns("ServiceName")
             Me.columnSiteName = MyBase.Columns("SiteName")
@@ -6067,6 +6244,9 @@ Partial Public Class SOSiQsqlDB
             Me.columnDelivery = MyBase.Columns("Delivery")
             Me.columnCustomerID = MyBase.Columns("CustomerID")
             Me.columnStatusID = MyBase.Columns("StatusID")
+            Me.columnMileage = MyBase.Columns("Mileage")
+            Me.columnPanelBuff = MyBase.Columns("PanelBuff")
+            Me.columnQtyOfPanelsBuffed = MyBase.Columns("QtyOfPanelsBuffed")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6090,8 +6270,6 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnRoNumber)
             Me.columnNotes = New Global.System.Data.DataColumn("Notes", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNotes)
-            Me.columnQty = New Global.System.Data.DataColumn("Qty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnQty)
             Me.columnStatusName = New Global.System.Data.DataColumn("StatusName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStatusName)
             Me.columnServiceName = New Global.System.Data.DataColumn("ServiceName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -6108,6 +6286,12 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnCustomerID)
             Me.columnStatusID = New Global.System.Data.DataColumn("StatusID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStatusID)
+            Me.columnMileage = New Global.System.Data.DataColumn("Mileage", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMileage)
+            Me.columnPanelBuff = New Global.System.Data.DataColumn("PanelBuff", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPanelBuff)
+            Me.columnQtyOfPanelsBuffed = New Global.System.Data.DataColumn("QtyOfPanelsBuffed", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnQtyOfPanelsBuffed)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnWorkOrderID}, true))
             Me.columnWorkOrderID.AutoIncrement = true
             Me.columnWorkOrderID.AutoIncrementSeed = -1
@@ -6584,11 +6768,13 @@ Partial Public Class SOSiQsqlDB
         
         Private columnCustomerID As Global.System.Data.DataColumn
         
-        Private columnQty As Global.System.Data.DataColumn
-        
         Private columnMileage As Global.System.Data.DataColumn
         
         Private columnInitialRatingID As Global.System.Data.DataColumn
+        
+        Private columnPanelBuff As Global.System.Data.DataColumn
+        
+        Private columnQtyOfPanelsBuffed As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -6747,14 +6933,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property QtyColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnQty
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property MileageColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnMileage
@@ -6766,6 +6944,22 @@ Partial Public Class SOSiQsqlDB
         Public ReadOnly Property InitialRatingIDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnInitialRatingID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property PanelBuffColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPanelBuff
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property QtyOfPanelsBuffedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnQtyOfPanelsBuffed
             End Get
         End Property
         
@@ -6822,11 +7016,12 @@ Partial Public Class SOSiQsqlDB
                     ByVal RatingName As String,  _
                     ByVal StatusID As Integer,  _
                     ByVal CustomerID As Integer,  _
-                    ByVal Qty As Integer,  _
                     ByVal Mileage As Integer,  _
-                    ByVal InitialRatingID As Short) As ViewOrderForChangeRow
+                    ByVal InitialRatingID As Short,  _
+                    ByVal PanelBuff As Boolean,  _
+                    ByVal QtyOfPanelsBuffed As Integer) As ViewOrderForChangeRow
             Dim rowViewOrderForChangeRow As ViewOrderForChangeRow = CType(Me.NewRow,ViewOrderForChangeRow)
-            Dim columnValuesArray() As Object = New Object() {WorkOrderID, ServiceName, VIN, StockNumber, RoNumber, StatusName, Notes, CreateDate, CreateTime, SiteName, LastName, FirstName, RatingName, StatusID, CustomerID, Qty, Mileage, InitialRatingID}
+            Dim columnValuesArray() As Object = New Object() {WorkOrderID, ServiceName, VIN, StockNumber, RoNumber, StatusName, Notes, CreateDate, CreateTime, SiteName, LastName, FirstName, RatingName, StatusID, CustomerID, Mileage, InitialRatingID, PanelBuff, QtyOfPanelsBuffed}
             rowViewOrderForChangeRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowViewOrderForChangeRow)
             Return rowViewOrderForChangeRow
@@ -6864,9 +7059,10 @@ Partial Public Class SOSiQsqlDB
             Me.columnRatingName = MyBase.Columns("RatingName")
             Me.columnStatusID = MyBase.Columns("StatusID")
             Me.columnCustomerID = MyBase.Columns("CustomerID")
-            Me.columnQty = MyBase.Columns("Qty")
             Me.columnMileage = MyBase.Columns("Mileage")
             Me.columnInitialRatingID = MyBase.Columns("InitialRatingID")
+            Me.columnPanelBuff = MyBase.Columns("PanelBuff")
+            Me.columnQtyOfPanelsBuffed = MyBase.Columns("QtyOfPanelsBuffed")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6902,12 +7098,14 @@ Partial Public Class SOSiQsqlDB
             MyBase.Columns.Add(Me.columnStatusID)
             Me.columnCustomerID = New Global.System.Data.DataColumn("CustomerID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCustomerID)
-            Me.columnQty = New Global.System.Data.DataColumn("Qty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnQty)
             Me.columnMileage = New Global.System.Data.DataColumn("Mileage", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMileage)
             Me.columnInitialRatingID = New Global.System.Data.DataColumn("InitialRatingID", GetType(Short), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnInitialRatingID)
+            Me.columnPanelBuff = New Global.System.Data.DataColumn("PanelBuff", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPanelBuff)
+            Me.columnQtyOfPanelsBuffed = New Global.System.Data.DataColumn("QtyOfPanelsBuffed", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnQtyOfPanelsBuffed)
             Me.columnWorkOrderID.AllowDBNull = false
             Me.columnServiceName.MaxLength = 250
             Me.columnVIN.MaxLength = 8
@@ -17564,6 +17762,754 @@ Partial Public Class SOSiQsqlDB
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class CorporateInvoiceViewDataTable
+        Inherits Global.System.Data.TypedTableBase(Of CorporateInvoiceViewRow)
+        
+        Private columnInvoiceNumber As Global.System.Data.DataColumn
+        
+        Private columnAmount As Global.System.Data.DataColumn
+        
+        Private columnServiceName As Global.System.Data.DataColumn
+        
+        Private columnServicePrice As Global.System.Data.DataColumn
+        
+        Private columnWorkOrderID As Global.System.Data.DataColumn
+        
+        Private columnSiteName As Global.System.Data.DataColumn
+        
+        Private columnCustomerAddress1 As Global.System.Data.DataColumn
+        
+        Private columnCityStateZip As Global.System.Data.DataColumn
+        
+        Private columnVIN As Global.System.Data.DataColumn
+        
+        Private columnStockNumber As Global.System.Data.DataColumn
+        
+        Private columnRoNumber As Global.System.Data.DataColumn
+        
+        Private columnMileage As Global.System.Data.DataColumn
+        
+        Private columnRatingAdder As Global.System.Data.DataColumn
+        
+        Private columnNotes As Global.System.Data.DataColumn
+        
+        Private columnDateCreated As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "CorporateInvoiceView"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property InvoiceNumberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnInvoiceNumber
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property AmountColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAmount
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property ServiceNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnServiceName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property ServicePriceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnServicePrice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property WorkOrderIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnWorkOrderID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property SiteNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSiteName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property CustomerAddress1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCustomerAddress1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property CityStateZipColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCityStateZip
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property VINColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVIN
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property StockNumberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnStockNumber
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property RoNumberColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRoNumber
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property MileageColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMileage
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property RatingAdderColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRatingAdder
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property NotesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNotes
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DateCreatedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDateCreated
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As CorporateInvoiceViewRow
+            Get
+                Return CType(Me.Rows(index),CorporateInvoiceViewRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event CorporateInvoiceViewRowChanging As CorporateInvoiceViewRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event CorporateInvoiceViewRowChanged As CorporateInvoiceViewRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event CorporateInvoiceViewRowDeleting As CorporateInvoiceViewRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event CorporateInvoiceViewRowDeleted As CorporateInvoiceViewRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddCorporateInvoiceViewRow(ByVal row As CorporateInvoiceViewRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddCorporateInvoiceViewRow(ByVal InvoiceNumber As Integer, ByVal Amount As Decimal, ByVal ServiceName As String, ByVal ServicePrice As Decimal, ByVal WorkOrderID As Integer, ByVal SiteName As String, ByVal CustomerAddress1 As String, ByVal CityStateZip As String, ByVal VIN As String, ByVal StockNumber As String, ByVal RoNumber As String, ByVal Mileage As Integer, ByVal RatingAdder As Decimal, ByVal Notes As String, ByVal DateCreated As Date) As CorporateInvoiceViewRow
+            Dim rowCorporateInvoiceViewRow As CorporateInvoiceViewRow = CType(Me.NewRow,CorporateInvoiceViewRow)
+            Dim columnValuesArray() As Object = New Object() {InvoiceNumber, Amount, ServiceName, ServicePrice, WorkOrderID, SiteName, CustomerAddress1, CityStateZip, VIN, StockNumber, RoNumber, Mileage, RatingAdder, Notes, DateCreated}
+            rowCorporateInvoiceViewRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowCorporateInvoiceViewRow)
+            Return rowCorporateInvoiceViewRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByInvoiceNumber(ByVal InvoiceNumber As Integer) As CorporateInvoiceViewRow
+            Return CType(Me.Rows.Find(New Object() {InvoiceNumber}),CorporateInvoiceViewRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As CorporateInvoiceViewDataTable = CType(MyBase.Clone,CorporateInvoiceViewDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New CorporateInvoiceViewDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnInvoiceNumber = MyBase.Columns("InvoiceNumber")
+            Me.columnAmount = MyBase.Columns("Amount")
+            Me.columnServiceName = MyBase.Columns("ServiceName")
+            Me.columnServicePrice = MyBase.Columns("ServicePrice")
+            Me.columnWorkOrderID = MyBase.Columns("WorkOrderID")
+            Me.columnSiteName = MyBase.Columns("SiteName")
+            Me.columnCustomerAddress1 = MyBase.Columns("CustomerAddress1")
+            Me.columnCityStateZip = MyBase.Columns("CityStateZip")
+            Me.columnVIN = MyBase.Columns("VIN")
+            Me.columnStockNumber = MyBase.Columns("StockNumber")
+            Me.columnRoNumber = MyBase.Columns("RoNumber")
+            Me.columnMileage = MyBase.Columns("Mileage")
+            Me.columnRatingAdder = MyBase.Columns("RatingAdder")
+            Me.columnNotes = MyBase.Columns("Notes")
+            Me.columnDateCreated = MyBase.Columns("DateCreated")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnInvoiceNumber = New Global.System.Data.DataColumn("InvoiceNumber", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnInvoiceNumber)
+            Me.columnAmount = New Global.System.Data.DataColumn("Amount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAmount)
+            Me.columnServiceName = New Global.System.Data.DataColumn("ServiceName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnServiceName)
+            Me.columnServicePrice = New Global.System.Data.DataColumn("ServicePrice", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnServicePrice)
+            Me.columnWorkOrderID = New Global.System.Data.DataColumn("WorkOrderID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnWorkOrderID)
+            Me.columnSiteName = New Global.System.Data.DataColumn("SiteName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSiteName)
+            Me.columnCustomerAddress1 = New Global.System.Data.DataColumn("CustomerAddress1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCustomerAddress1)
+            Me.columnCityStateZip = New Global.System.Data.DataColumn("CityStateZip", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCityStateZip)
+            Me.columnVIN = New Global.System.Data.DataColumn("VIN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVIN)
+            Me.columnStockNumber = New Global.System.Data.DataColumn("StockNumber", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnStockNumber)
+            Me.columnRoNumber = New Global.System.Data.DataColumn("RoNumber", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRoNumber)
+            Me.columnMileage = New Global.System.Data.DataColumn("Mileage", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMileage)
+            Me.columnRatingAdder = New Global.System.Data.DataColumn("RatingAdder", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRatingAdder)
+            Me.columnNotes = New Global.System.Data.DataColumn("Notes", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNotes)
+            Me.columnDateCreated = New Global.System.Data.DataColumn("DateCreated", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDateCreated)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnInvoiceNumber}, true))
+            Me.columnInvoiceNumber.AllowDBNull = false
+            Me.columnInvoiceNumber.Unique = true
+            Me.columnServiceName.ReadOnly = true
+            Me.columnServiceName.MaxLength = 303
+            Me.columnSiteName.MaxLength = 50
+            Me.columnCustomerAddress1.MaxLength = 20
+            Me.columnCityStateZip.ReadOnly = true
+            Me.columnCityStateZip.MaxLength = 64
+            Me.columnVIN.MaxLength = 8
+            Me.columnStockNumber.MaxLength = 25
+            Me.columnRoNumber.MaxLength = 25
+            Me.columnNotes.MaxLength = 500
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewCorporateInvoiceViewRow() As CorporateInvoiceViewRow
+            Return CType(Me.NewRow,CorporateInvoiceViewRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New CorporateInvoiceViewRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(CorporateInvoiceViewRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.CorporateInvoiceViewRowChangedEvent) Is Nothing) Then
+                RaiseEvent CorporateInvoiceViewRowChanged(Me, New CorporateInvoiceViewRowChangeEvent(CType(e.Row,CorporateInvoiceViewRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.CorporateInvoiceViewRowChangingEvent) Is Nothing) Then
+                RaiseEvent CorporateInvoiceViewRowChanging(Me, New CorporateInvoiceViewRowChangeEvent(CType(e.Row,CorporateInvoiceViewRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.CorporateInvoiceViewRowDeletedEvent) Is Nothing) Then
+                RaiseEvent CorporateInvoiceViewRowDeleted(Me, New CorporateInvoiceViewRowChangeEvent(CType(e.Row,CorporateInvoiceViewRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.CorporateInvoiceViewRowDeletingEvent) Is Nothing) Then
+                RaiseEvent CorporateInvoiceViewRowDeleting(Me, New CorporateInvoiceViewRowChangeEvent(CType(e.Row,CorporateInvoiceViewRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveCorporateInvoiceViewRow(ByVal row As CorporateInvoiceViewRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As SOSiQsqlDB = New SOSiQsqlDB()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "CorporateInvoiceViewDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class ShowMeTheMoneyDataTable
+        Inherits Global.System.Data.TypedTableBase(Of ShowMeTheMoneyRow)
+        
+        Private columnSiteName As Global.System.Data.DataColumn
+        
+        Private columnInvoicesAmount As Global.System.Data.DataColumn
+        
+        Private columnYear As Global.System.Data.DataColumn
+        
+        Private columnMonth As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "ShowMeTheMoney"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property SiteNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSiteName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property InvoicesAmountColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnInvoicesAmount
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property YearColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnYear
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property MonthColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnMonth
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As ShowMeTheMoneyRow
+            Get
+                Return CType(Me.Rows(index),ShowMeTheMoneyRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event ShowMeTheMoneyRowChanging As ShowMeTheMoneyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event ShowMeTheMoneyRowChanged As ShowMeTheMoneyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event ShowMeTheMoneyRowDeleting As ShowMeTheMoneyRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event ShowMeTheMoneyRowDeleted As ShowMeTheMoneyRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddShowMeTheMoneyRow(ByVal row As ShowMeTheMoneyRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddShowMeTheMoneyRow(ByVal SiteName As String, ByVal InvoicesAmount As Decimal, ByVal Year As Integer, ByVal Month As Integer) As ShowMeTheMoneyRow
+            Dim rowShowMeTheMoneyRow As ShowMeTheMoneyRow = CType(Me.NewRow,ShowMeTheMoneyRow)
+            Dim columnValuesArray() As Object = New Object() {SiteName, InvoicesAmount, Year, Month}
+            rowShowMeTheMoneyRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowShowMeTheMoneyRow)
+            Return rowShowMeTheMoneyRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As ShowMeTheMoneyDataTable = CType(MyBase.Clone,ShowMeTheMoneyDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New ShowMeTheMoneyDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnSiteName = MyBase.Columns("SiteName")
+            Me.columnInvoicesAmount = MyBase.Columns("InvoicesAmount")
+            Me.columnYear = MyBase.Columns("Year")
+            Me.columnMonth = MyBase.Columns("Month")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnSiteName = New Global.System.Data.DataColumn("SiteName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSiteName)
+            Me.columnInvoicesAmount = New Global.System.Data.DataColumn("InvoicesAmount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnInvoicesAmount)
+            Me.columnYear = New Global.System.Data.DataColumn("Year", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnYear)
+            Me.columnMonth = New Global.System.Data.DataColumn("Month", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnMonth)
+            Me.columnSiteName.MaxLength = 50
+            Me.columnInvoicesAmount.ReadOnly = true
+            Me.columnYear.ReadOnly = true
+            Me.columnMonth.ReadOnly = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewShowMeTheMoneyRow() As ShowMeTheMoneyRow
+            Return CType(Me.NewRow,ShowMeTheMoneyRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New ShowMeTheMoneyRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(ShowMeTheMoneyRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.ShowMeTheMoneyRowChangedEvent) Is Nothing) Then
+                RaiseEvent ShowMeTheMoneyRowChanged(Me, New ShowMeTheMoneyRowChangeEvent(CType(e.Row,ShowMeTheMoneyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.ShowMeTheMoneyRowChangingEvent) Is Nothing) Then
+                RaiseEvent ShowMeTheMoneyRowChanging(Me, New ShowMeTheMoneyRowChangeEvent(CType(e.Row,ShowMeTheMoneyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.ShowMeTheMoneyRowDeletedEvent) Is Nothing) Then
+                RaiseEvent ShowMeTheMoneyRowDeleted(Me, New ShowMeTheMoneyRowChangeEvent(CType(e.Row,ShowMeTheMoneyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.ShowMeTheMoneyRowDeletingEvent) Is Nothing) Then
+                RaiseEvent ShowMeTheMoneyRowDeleting(Me, New ShowMeTheMoneyRowChangeEvent(CType(e.Row,ShowMeTheMoneyRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveShowMeTheMoneyRow(ByVal row As ShowMeTheMoneyRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As SOSiQsqlDB = New SOSiQsqlDB()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "ShowMeTheMoneyDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class ShowMeActiveEmployeesBySiteRow
@@ -18485,21 +19431,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Qty() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableWorkOrder.QtyColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Qty' in table 'WorkOrder' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableWorkOrder.QtyColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property StatusID() As Integer
             Get
                 Try 
@@ -18555,6 +19486,36 @@ Partial Public Class SOSiQsqlDB
             End Get
             Set
                 Me(Me.tableWorkOrder.MileageColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property PanelBuff() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableWorkOrder.PanelBuffColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PanelBuff' in table 'WorkOrder' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWorkOrder.PanelBuffColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Qtyofpanelsbuffed() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableWorkOrder.QtyofpanelsbuffedColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Qtyofpanelsbuffed' in table 'WorkOrder' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWorkOrder.QtyofpanelsbuffedColumn) = value
             End Set
         End Property
         
@@ -18680,18 +19641,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsQtyNull() As Boolean
-            Return Me.IsNull(Me.tableWorkOrder.QtyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetQtyNull()
-            Me(Me.tableWorkOrder.QtyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsStatusIDNull() As Boolean
             Return Me.IsNull(Me.tableWorkOrder.StatusIDColumn)
         End Function
@@ -18737,6 +19686,30 @@ Partial Public Class SOSiQsqlDB
         Public Sub SetMileageNull()
             Me(Me.tableWorkOrder.MileageColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsPanelBuffNull() As Boolean
+            Return Me.IsNull(Me.tableWorkOrder.PanelBuffColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetPanelBuffNull()
+            Me(Me.tableWorkOrder.PanelBuffColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsQtyofpanelsbuffedNull() As Boolean
+            Return Me.IsNull(Me.tableWorkOrder.QtyofpanelsbuffedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetQtyofpanelsbuffedNull()
+            Me(Me.tableWorkOrder.QtyofpanelsbuffedColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -18758,7 +19731,12 @@ Partial Public Class SOSiQsqlDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property CustomerID() As Integer
             Get
-                Return CType(Me(Me.tableViewOrdersReadyForInvoice.CustomerIDColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableViewOrdersReadyForInvoice.CustomerIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CustomerID' in table 'ViewOrdersReadyForInvoice' is DBNull."& _ 
+                            "", e)
+                End Try
             End Get
             Set
                 Me(Me.tableViewOrdersReadyForInvoice.CustomerIDColumn) = value
@@ -18995,6 +19973,34 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property __Panel_Buff____20_panel_() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableViewOrdersReadyForInvoice.__Panel_Buff____20_panel_Column),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column ''Panel Buff @ $20/panel'' in table 'ViewOrdersReadyForInvoi"& _ 
+                            "ce' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableViewOrdersReadyForInvoice.__Panel_Buff____20_panel_Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsCustomerIDNull() As Boolean
+            Return Me.IsNull(Me.tableViewOrdersReadyForInvoice.CustomerIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetCustomerIDNull()
+            Me(Me.tableViewOrdersReadyForInvoice.CustomerIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsStatusIDNull() As Boolean
             Return Me.IsNull(Me.tableViewOrdersReadyForInvoice.StatusIDColumn)
         End Function
@@ -19160,6 +20166,18 @@ Partial Public Class SOSiQsqlDB
         Public Sub SetAdderNull()
             Me(Me.tableViewOrdersReadyForInvoice.AdderColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function Is__Panel_Buff____20_panel_Null() As Boolean
+            Return Me.IsNull(Me.tableViewOrdersReadyForInvoice.__Panel_Buff____20_panel_Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub Set__Panel_Buff____20_panel_Null()
+            Me(Me.tableViewOrdersReadyForInvoice.__Panel_Buff____20_panel_Column) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -19181,7 +20199,11 @@ Partial Public Class SOSiQsqlDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property CustomerID() As Integer
             Get
-                Return CType(Me(Me.tableCreateInvoice.CustomerIDColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableCreateInvoice.CustomerIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CustomerID' in table 'CreateInvoice' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableCreateInvoice.CustomerIDColumn) = value
@@ -19381,6 +20403,48 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Adder() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableCreateInvoice.AdderColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Adder' in table 'CreateInvoice' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCreateInvoice.AdderColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Total() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableCreateInvoice.TotalColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total' in table 'CreateInvoice' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCreateInvoice.TotalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsCustomerIDNull() As Boolean
+            Return Me.IsNull(Me.tableCreateInvoice.CustomerIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetCustomerIDNull()
+            Me(Me.tableCreateInvoice.CustomerIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsStatusIDNull() As Boolean
             Return Me.IsNull(Me.tableCreateInvoice.StatusIDColumn)
         End Function
@@ -19521,6 +20585,30 @@ Partial Public Class SOSiQsqlDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetRatingNameNull()
             Me(Me.tableCreateInvoice.RatingNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsAdderNull() As Boolean
+            Return Me.IsNull(Me.tableCreateInvoice.AdderColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetAdderNull()
+            Me(Me.tableCreateInvoice.AdderColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTotalNull() As Boolean
+            Return Me.IsNull(Me.tableCreateInvoice.TotalColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTotalNull()
+            Me(Me.tableCreateInvoice.TotalColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -20164,21 +21252,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Qty() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Qty' in table 'ShowMeWorkOrdersBySiteToEdit' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property StatusName() As String
             Get
                 Try 
@@ -20307,6 +21380,54 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Mileage() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeWorkOrdersBySiteToEdit.MileageColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Mileage' in table 'ShowMeWorkOrdersBySiteToEdit' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeWorkOrdersBySiteToEdit.MileageColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property PanelBuff() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeWorkOrdersBySiteToEdit.PanelBuffColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PanelBuff' in table 'ShowMeWorkOrdersBySiteToEdit' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeWorkOrdersBySiteToEdit.PanelBuffColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property QtyOfPanelsBuffed() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyOfPanelsBuffedColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'QtyOfPanelsBuffed' in table 'ShowMeWorkOrdersBySiteToEdit' "& _ 
+                            "is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyOfPanelsBuffedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsCreateDateNull() As Boolean
             Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.CreateDateColumn)
         End Function
@@ -20403,18 +21524,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsQtyNull() As Boolean
-            Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.QtyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetQtyNull()
-            Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsStatusNameNull() As Boolean
             Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.StatusNameColumn)
         End Function
@@ -20507,6 +21616,42 @@ Partial Public Class SOSiQsqlDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetStatusIDNull()
             Me(Me.tableShowMeWorkOrdersBySiteToEdit.StatusIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsMileageNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.MileageColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetMileageNull()
+            Me(Me.tableShowMeWorkOrdersBySiteToEdit.MileageColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsPanelBuffNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.PanelBuffColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetPanelBuffNull()
+            Me(Me.tableShowMeWorkOrdersBySiteToEdit.PanelBuffColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsQtyOfPanelsBuffedNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeWorkOrdersBySiteToEdit.QtyOfPanelsBuffedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetQtyOfPanelsBuffedNull()
+            Me(Me.tableShowMeWorkOrdersBySiteToEdit.QtyOfPanelsBuffedColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -20831,21 +21976,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Qty() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableViewOrderForChange.QtyColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Qty' in table 'ViewOrderForChange' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableViewOrderForChange.QtyColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property Mileage() As Integer
             Get
                 Try 
@@ -20871,6 +22001,37 @@ Partial Public Class SOSiQsqlDB
             End Get
             Set
                 Me(Me.tableViewOrderForChange.InitialRatingIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property PanelBuff() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableViewOrderForChange.PanelBuffColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PanelBuff' in table 'ViewOrderForChange' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableViewOrderForChange.PanelBuffColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property QtyOfPanelsBuffed() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableViewOrderForChange.QtyOfPanelsBuffedColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'QtyOfPanelsBuffed' in table 'ViewOrderForChange' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableViewOrderForChange.QtyOfPanelsBuffedColumn) = value
             End Set
         End Property
         
@@ -21044,18 +22205,6 @@ Partial Public Class SOSiQsqlDB
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsQtyNull() As Boolean
-            Return Me.IsNull(Me.tableViewOrderForChange.QtyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetQtyNull()
-            Me(Me.tableViewOrderForChange.QtyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsMileageNull() As Boolean
             Return Me.IsNull(Me.tableViewOrderForChange.MileageColumn)
         End Function
@@ -21076,6 +22225,30 @@ Partial Public Class SOSiQsqlDB
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetInitialRatingIDNull()
             Me(Me.tableViewOrderForChange.InitialRatingIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsPanelBuffNull() As Boolean
+            Return Me.IsNull(Me.tableViewOrderForChange.PanelBuffColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetPanelBuffNull()
+            Me(Me.tableViewOrderForChange.PanelBuffColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsQtyOfPanelsBuffedNull() As Boolean
+            Return Me.IsNull(Me.tableViewOrderForChange.QtyOfPanelsBuffedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetQtyOfPanelsBuffedNull()
+            Me(Me.tableViewOrderForChange.QtyOfPanelsBuffedColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -26550,6 +27723,536 @@ Partial Public Class SOSiQsqlDB
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class CorporateInvoiceViewRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableCorporateInvoiceView As CorporateInvoiceViewDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableCorporateInvoiceView = CType(Me.Table,CorporateInvoiceViewDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property InvoiceNumber() As Integer
+            Get
+                Return CType(Me(Me.tableCorporateInvoiceView.InvoiceNumberColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.InvoiceNumberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Amount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.AmountColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Amount' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.AmountColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ServiceName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.ServiceNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ServiceName' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.ServiceNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ServicePrice() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.ServicePriceColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ServicePrice' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.ServicePriceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property WorkOrderID() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.WorkOrderIDColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'WorkOrderID' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.WorkOrderIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property SiteName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.SiteNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SiteName' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.SiteNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property CustomerAddress1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.CustomerAddress1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CustomerAddress1' in table 'CorporateInvoiceView' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.CustomerAddress1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property CityStateZip() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.CityStateZipColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CityStateZip' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.CityStateZipColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property VIN() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.VINColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'VIN' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.VINColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property StockNumber() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.StockNumberColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'StockNumber' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.StockNumberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property RoNumber() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.RoNumberColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'RoNumber' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.RoNumberColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Mileage() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.MileageColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Mileage' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.MileageColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property RatingAdder() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.RatingAdderColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'RatingAdder' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.RatingAdderColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Notes() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.NotesColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Notes' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.NotesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property DateCreated() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableCorporateInvoiceView.DateCreatedColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DateCreated' in table 'CorporateInvoiceView' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCorporateInvoiceView.DateCreatedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsAmountNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.AmountColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetAmountNull()
+            Me(Me.tableCorporateInvoiceView.AmountColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsServiceNameNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.ServiceNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetServiceNameNull()
+            Me(Me.tableCorporateInvoiceView.ServiceNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsServicePriceNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.ServicePriceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetServicePriceNull()
+            Me(Me.tableCorporateInvoiceView.ServicePriceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsWorkOrderIDNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.WorkOrderIDColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetWorkOrderIDNull()
+            Me(Me.tableCorporateInvoiceView.WorkOrderIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsSiteNameNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.SiteNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetSiteNameNull()
+            Me(Me.tableCorporateInvoiceView.SiteNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsCustomerAddress1Null() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.CustomerAddress1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetCustomerAddress1Null()
+            Me(Me.tableCorporateInvoiceView.CustomerAddress1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsCityStateZipNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.CityStateZipColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetCityStateZipNull()
+            Me(Me.tableCorporateInvoiceView.CityStateZipColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsVINNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.VINColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetVINNull()
+            Me(Me.tableCorporateInvoiceView.VINColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsStockNumberNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.StockNumberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetStockNumberNull()
+            Me(Me.tableCorporateInvoiceView.StockNumberColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsRoNumberNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.RoNumberColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetRoNumberNull()
+            Me(Me.tableCorporateInvoiceView.RoNumberColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsMileageNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.MileageColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetMileageNull()
+            Me(Me.tableCorporateInvoiceView.MileageColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsRatingAdderNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.RatingAdderColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetRatingAdderNull()
+            Me(Me.tableCorporateInvoiceView.RatingAdderColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsNotesNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.NotesColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetNotesNull()
+            Me(Me.tableCorporateInvoiceView.NotesColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsDateCreatedNull() As Boolean
+            Return Me.IsNull(Me.tableCorporateInvoiceView.DateCreatedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetDateCreatedNull()
+            Me(Me.tableCorporateInvoiceView.DateCreatedColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class ShowMeTheMoneyRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableShowMeTheMoney As ShowMeTheMoneyDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableShowMeTheMoney = CType(Me.Table,ShowMeTheMoneyDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property SiteName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeTheMoney.SiteNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SiteName' in table 'ShowMeTheMoney' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeTheMoney.SiteNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property InvoicesAmount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeTheMoney.InvoicesAmountColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'InvoicesAmount' in table 'ShowMeTheMoney' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeTheMoney.InvoicesAmountColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Year() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeTheMoney.YearColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Year' in table 'ShowMeTheMoney' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeTheMoney.YearColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Month() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableShowMeTheMoney.MonthColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Month' in table 'ShowMeTheMoney' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableShowMeTheMoney.MonthColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsSiteNameNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeTheMoney.SiteNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetSiteNameNull()
+            Me(Me.tableShowMeTheMoney.SiteNameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsInvoicesAmountNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeTheMoney.InvoicesAmountColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetInvoicesAmountNull()
+            Me(Me.tableShowMeTheMoney.InvoicesAmountColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsYearNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeTheMoney.YearColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetYearNull()
+            Me(Me.tableShowMeTheMoney.YearColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsMonthNull() As Boolean
+            Return Me.IsNull(Me.tableShowMeTheMoney.MonthColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetMonthNull()
+            Me(Me.tableShowMeTheMoney.MonthColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -28204,6 +29907,78 @@ Partial Public Class SOSiQsqlDB
             End Get
         End Property
     End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class CorporateInvoiceViewRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As CorporateInvoiceViewRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As CorporateInvoiceViewRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As CorporateInvoiceViewRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class ShowMeTheMoneyRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As ShowMeTheMoneyRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As ShowMeTheMoneyRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As ShowMeTheMoneyRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
 End Class
 
 Namespace SOSiQsqlDBTableAdapters
@@ -29668,11 +31443,12 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("RoNumber", "RoNumber")
             tableMapping.ColumnMappings.Add("ServiceID", "ServiceID")
             tableMapping.ColumnMappings.Add("Notes", "Notes")
-            tableMapping.ColumnMappings.Add("Qty", "Qty")
             tableMapping.ColumnMappings.Add("StatusID", "StatusID")
             tableMapping.ColumnMappings.Add("CompleteDate", "CompleteDate")
             tableMapping.ColumnMappings.Add("Delivery", "Delivery")
             tableMapping.ColumnMappings.Add("Mileage", "Mileage")
+            tableMapping.ColumnMappings.Add("PanelBuff", "PanelBuff")
+            tableMapping.ColumnMappings.Add("Qtyofpanelsbuffed", "Qtyofpanelsbuffed")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
@@ -29688,9 +31464,10 @@ Namespace SOSiQsqlDBTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RoNumber", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "RoNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ServiceID", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 5, 0, "ServiceID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Notes", Global.System.Data.SqlDbType.VarChar, 500, Global.System.Data.ParameterDirection.Input, 0, 0, "Notes", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Qty", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Qty", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Qty", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Qtyofpanelsbuffed", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bIncludeDelivery", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "Delivery", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mileage", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Mileage", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bIncludePanelBuff", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "PanelBuff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "dbo.UpdateWorkOrder"
@@ -29699,7 +31476,7 @@ Namespace SOSiQsqlDBTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@WorkOrderID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "WorkOrderID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@VIN", Global.System.Data.SqlDbType.VarChar, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "VIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ServiceID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "ServiceID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Qty", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Qty", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Qty", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Qtyofpanelsbuffed", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StockNo", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "StockNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RoNo", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "RoNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StatusID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "StatusID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -29710,6 +31487,7 @@ Namespace SOSiQsqlDBTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Delivery", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "Delivery", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Mileage", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "Mileage", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@InitialRatingID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "InitialRatingID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bPanelBuff", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "PanelBuff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -29784,7 +31562,7 @@ Namespace SOSiQsqlDBTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal InitialRatingID As Global.System.Nullable(Of Short), ByVal EmployeeID As Global.System.Nullable(Of Integer), ByVal CustomerID As Global.System.Nullable(Of Integer), ByVal CreateDate As Global.System.Nullable(Of Date), ByVal VIN As String, ByVal StockNumber As String, ByVal RoNumber As String, ByVal ServiceID As Global.System.Nullable(Of Short), ByVal Notes As String, ByVal Qty As Global.System.Nullable(Of Integer), ByVal bIncludeDelivery As Global.System.Nullable(Of Boolean), ByVal Mileage As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal InitialRatingID As Global.System.Nullable(Of Short), ByVal EmployeeID As Global.System.Nullable(Of Integer), ByVal CustomerID As Global.System.Nullable(Of Integer), ByVal CreateDate As Global.System.Nullable(Of Date), ByVal VIN As String, ByVal StockNumber As String, ByVal RoNumber As String, ByVal ServiceID As Global.System.Nullable(Of Short), ByVal Notes As String, ByVal Qty As Global.System.Nullable(Of Integer), ByVal bIncludeDelivery As Global.System.Nullable(Of Boolean), ByVal Mileage As Global.System.Nullable(Of Integer), ByVal bIncludePanelBuff As Global.System.Nullable(Of Boolean)) As Integer
             If (InitialRatingID.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(InitialRatingID.Value,Short)
             Else
@@ -29845,6 +31623,11 @@ Namespace SOSiQsqlDBTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
+            If (bIncludePanelBuff.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(bIncludePanelBuff.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -29864,7 +31647,7 @@ Namespace SOSiQsqlDBTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal WorkOrderID As Global.System.Nullable(Of Integer), ByVal VIN As String, ByVal ServiceID As Global.System.Nullable(Of Integer), ByVal Qty As Global.System.Nullable(Of Integer), ByVal StockNo As String, ByVal RoNo As String, ByVal StatusID As Global.System.Nullable(Of Integer), ByVal EmpID As Global.System.Nullable(Of Integer), ByVal CreatedOn As Global.System.Nullable(Of Date), ByVal CompleteDate As Global.System.Nullable(Of Date), ByVal Notes As String, ByVal Delivery As Global.System.Nullable(Of Boolean), ByVal Mileage As Global.System.Nullable(Of Integer), ByVal InitialRatingID As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update(ByVal WorkOrderID As Global.System.Nullable(Of Integer), ByVal VIN As String, ByVal ServiceID As Global.System.Nullable(Of Integer), ByVal Qty As Global.System.Nullable(Of Integer), ByVal StockNo As String, ByVal RoNo As String, ByVal StatusID As Global.System.Nullable(Of Integer), ByVal EmpID As Global.System.Nullable(Of Integer), ByVal CreatedOn As Global.System.Nullable(Of Date), ByVal CompleteDate As Global.System.Nullable(Of Date), ByVal Notes As String, ByVal Delivery As Global.System.Nullable(Of Boolean), ByVal Mileage As Global.System.Nullable(Of Integer), ByVal InitialRatingID As Global.System.Nullable(Of Integer), ByVal bPanelBuff As Global.System.Nullable(Of Boolean)) As Integer
             If (WorkOrderID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(WorkOrderID.Value,Integer)
             Else
@@ -29934,6 +31717,11 @@ Namespace SOSiQsqlDBTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(InitialRatingID.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (bPanelBuff.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(bPanelBuff.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -30120,6 +31908,7 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("RatingName", "RatingName")
             tableMapping.ColumnMappings.Add("Total", "Total")
             tableMapping.ColumnMappings.Add("Adder", "Adder")
+            tableMapping.ColumnMappings.Add("'Panel Buff @ $20/panel'", "'Panel Buff @ $20/panel'")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -30318,6 +32107,8 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("Notes", "Notes")
             tableMapping.ColumnMappings.Add("Qty", "Qty")
             tableMapping.ColumnMappings.Add("RatingName", "RatingName")
+            tableMapping.ColumnMappings.Add("Adder", "Adder")
+            tableMapping.ColumnMappings.Add("Total", "Total")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
@@ -30426,7 +32217,7 @@ Namespace SOSiQsqlDBTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Fill(ByVal SiteID As Global.System.Nullable(Of Integer)) As Global.System.Nullable(Of Integer)
+        Public Overloads Overridable Function Fill(ByVal SiteID As Global.System.Nullable(Of Integer)) As Object
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(0)
             If (SiteID.HasValue = true) Then
                 command.Parameters(1).Value = CType(SiteID.Value,Integer)
@@ -30448,9 +32239,9 @@ Namespace SOSiQsqlDBTableAdapters
             End Try
             If ((returnValue Is Nothing)  _
                         OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
-                Return New Global.System.Nullable(Of Integer)()
+                Return Nothing
             Else
-                Return New Global.System.Nullable(Of Integer)(CType(returnValue,Integer))
+                Return CType(returnValue,Object)
             End If
         End Function
     End Class
@@ -30830,7 +32621,6 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("StockNumber", "StockNumber")
             tableMapping.ColumnMappings.Add("RoNumber", "RoNumber")
             tableMapping.ColumnMappings.Add("Notes", "Notes")
-            tableMapping.ColumnMappings.Add("Qty", "Qty")
             tableMapping.ColumnMappings.Add("StatusName", "StatusName")
             tableMapping.ColumnMappings.Add("ServiceName", "ServiceName")
             tableMapping.ColumnMappings.Add("SiteName", "SiteName")
@@ -30839,6 +32629,9 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("Delivery", "Delivery")
             tableMapping.ColumnMappings.Add("CustomerID", "CustomerID")
             tableMapping.ColumnMappings.Add("StatusID", "StatusID")
+            tableMapping.ColumnMappings.Add("Mileage", "Mileage")
+            tableMapping.ColumnMappings.Add("PanelBuff", "PanelBuff")
+            tableMapping.ColumnMappings.Add("QtyOfPanelsBuffed", "QtyOfPanelsBuffed")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -31287,9 +33080,10 @@ Namespace SOSiQsqlDBTableAdapters
             tableMapping.ColumnMappings.Add("RatingName", "RatingName")
             tableMapping.ColumnMappings.Add("StatusID", "StatusID")
             tableMapping.ColumnMappings.Add("CustomerID", "CustomerID")
-            tableMapping.ColumnMappings.Add("Qty", "Qty")
             tableMapping.ColumnMappings.Add("Mileage", "Mileage")
             tableMapping.ColumnMappings.Add("InitialRatingID", "InitialRatingID")
+            tableMapping.ColumnMappings.Add("PanelBuff", "PanelBuff")
+            tableMapping.ColumnMappings.Add("QtyOfPanelsBuffed", "QtyOfPanelsBuffed")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -38054,6 +39848,382 @@ Namespace SOSiQsqlDBTableAdapters
         Public Overloads Overridable Function GetData() As SOSiQsqlDB.ShowPauseReasonsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As SOSiQsqlDB.ShowPauseReasonsDataTable = New SOSiQsqlDB.ShowPauseReasonsDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class CorporateInvoiceViewTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "CorporateInvoiceView"
+            tableMapping.ColumnMappings.Add("InvoiceNumber", "InvoiceNumber")
+            tableMapping.ColumnMappings.Add("Amount", "Amount")
+            tableMapping.ColumnMappings.Add("ServiceName", "ServiceName")
+            tableMapping.ColumnMappings.Add("ServicePrice", "ServicePrice")
+            tableMapping.ColumnMappings.Add("WorkOrderID", "WorkOrderID")
+            tableMapping.ColumnMappings.Add("SiteName", "SiteName")
+            tableMapping.ColumnMappings.Add("CustomerAddress1", "CustomerAddress1")
+            tableMapping.ColumnMappings.Add("CityStateZip", "CityStateZip")
+            tableMapping.ColumnMappings.Add("VIN", "VIN")
+            tableMapping.ColumnMappings.Add("StockNumber", "StockNumber")
+            tableMapping.ColumnMappings.Add("RoNumber", "RoNumber")
+            tableMapping.ColumnMappings.Add("Mileage", "Mileage")
+            tableMapping.ColumnMappings.Add("RatingAdder", "RatingAdder")
+            tableMapping.ColumnMappings.Add("Notes", "Notes")
+            tableMapping.ColumnMappings.Add("DateCreated", "DateCreated")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.CorporateInvoiceView"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SiteID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As SOSiQsqlDB.CorporateInvoiceViewDataTable, ByVal SiteID As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (SiteID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(SiteID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal SiteID As Global.System.Nullable(Of Integer)) As SOSiQsqlDB.CorporateInvoiceViewDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (SiteID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(SiteID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            Dim dataTable As SOSiQsqlDB.CorporateInvoiceViewDataTable = New SOSiQsqlDB.CorporateInvoiceViewDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class ShowMeTheMoneyTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "ShowMeTheMoney"
+            tableMapping.ColumnMappings.Add("SiteName", "SiteName")
+            tableMapping.ColumnMappings.Add("InvoicesAmount", "InvoicesAmount")
+            tableMapping.ColumnMappings.Add("Year", "Year")
+            tableMapping.ColumnMappings.Add("Month", "Month")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.ShowMeTheMoney"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As SOSiQsqlDB.ShowMeTheMoneyDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As SOSiQsqlDB.ShowMeTheMoneyDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As SOSiQsqlDB.ShowMeTheMoneyDataTable = New SOSiQsqlDB.ShowMeTheMoneyDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

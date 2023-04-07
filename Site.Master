@@ -137,6 +137,8 @@
                         <a href="/Reports/Performance">Performance</a>
                         <a href="/Reports/CarHistory">Car History</a>
                         <a href="/Reports/LocalDashboard">Site Stats</a>
+                        <a href="/Reports/OpenInvoices/OpenInvoices">Open Invoices</a>
+                          <a href="/Reports/Financials/FinancialReports">Invoice Trends</a>
                       </div>
                     </div>
 

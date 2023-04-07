@@ -136,7 +136,7 @@ Public Class ClockWorkOrder
         Dim WorkOrderAdapter As New WorkOrderTableAdapter
 
 
-        WorkOrderAdapter.Update(WorkOrderID:=iWoID, Nothing, Nothing, Nothing, Nothing, Nothing, StatusID:=iStatusID, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing)
+        WorkOrderAdapter.Update(WorkOrderID:=iWoID, Nothing, Nothing, Nothing, Nothing, Nothing, StatusID:=iStatusID, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing)
 
 
 

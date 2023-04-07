@@ -27,6 +27,10 @@ Public Class CreateInvoice
         'stores the invoicenumber returned from the stored proc into the iInvoiceNumber variable
         'also the stored proc updates the workorder status to closed
 
+        'Need to check if the work order has already been invoiced or not
+
+
+
         Try
             'needs to double check that the workorder has not already been invoiced
 

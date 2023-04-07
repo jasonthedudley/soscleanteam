@@ -27,8 +27,14 @@
             End If
 
         Next
+
+        Dim sPageURL As String = "/WorkOrders/Management/EditWorkOrder?orderid="
+
         If bSelected = True Then
-            Response.Redirect("/WorkOrders/Management/EditWorkOrder?orderid=" & iWorkOrder)
+
+            Page.ClientScript.RegisterClientScriptBlock(GetType(Page), "SCRIPT", "window.open('" & sPageURL & iWorkOrder & "','','');;", True)
+
+            'Response.Redirect("/WorkOrders/Management/EditWorkOrder?orderid=" & iWorkOrder)
         Else
             Response.Write("<script LANGUAGE='JavaScript' >alert('Select Order Before Clicking Edit Order')</script>")
         End If
@@ -50,7 +56,7 @@
                 If cbRow.Checked Then
                     bSelected = True
                     Try
-                        WorkOrderAdapter.Update(CInt(row.Cells(2).Text), Nothing, Nothing, Nothing, Nothing, Nothing, 11, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing)
+                        WorkOrderAdapter.Update(CInt(row.Cells(2).Text), Nothing, Nothing, Nothing, Nothing, Nothing, 11, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing)
 
                         Response.Write("<script LANGUAGE='JavaScript' >alert('Work Order Updated')</script>")
                     Catch ex As Exception
@@ -70,8 +76,6 @@
 
         End If
 
-
-        Response.Redirect("~/WorkOrders/Management/WorkOrders.aspx")
 
 
     End Sub

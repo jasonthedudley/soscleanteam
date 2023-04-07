@@ -34,8 +34,9 @@ Public Class Create
                 iMileage = CInt(txtMileage.Text)
             End If
 
+
             Try
-                WorkOrderAdapter.Insert(iInitialRating, iEmployee, iSiteID, sqlCreateDate, txtVIN.Text, txtStockNo.Text, txtRoNo.Text, ddService.SelectedValue, txtNotes.Text, CInt(txtPriceMultiplier.Text), bDeliveryIncluded, iMileage)
+                WorkOrderAdapter.Insert(iInitialRating, iEmployee, iSiteID, sqlCreateDate, txtVIN.Text, txtStockNo.Text, txtRoNo.Text, ddService.SelectedValue, txtNotes.Text, CInt(txtPriceMultiplier.Text), bDeliveryIncluded, iMileage, cbPanelBuff.Checked)
 
             Catch ex As Exception
 
@@ -66,10 +67,8 @@ Public Class Create
         Select Case sServiceSelected
             Case = "Pre-owned Detail"
                 CbDelivery.Visible = True
-                lblIncludeDelivery.Visible = True
             Case = "New Car Lot Shield"
                 CbDelivery.Visible = True
-                lblIncludeDelivery.Visible = True
             Case = "New Car Panel Buff"
                 PanelBuffPriceMultiplierRow.Visible = True
             Case = "Pre-owned Panel Buff"
@@ -77,8 +76,6 @@ Public Class Create
 
             Case Else
                 CbDelivery.Visible = False
-                lblIncludeDelivery.Visible = False
-                PanelBuffPriceMultiplierRow.Visible = False
         End Select
 
 
@@ -89,12 +86,34 @@ Public Class Create
         'this will multiply the base price of the service by whatever value the user places in this text box
         Dim dblBasePrice As Decimal
 
-        Dim lblBasePrice As Label = fvServicePrice.FindControl("ServicePriceLabel")
-        dblBasePrice = CDec(lblBasePrice.Text)
+        Dim sServiceSelected As String = ddService.SelectedItem.Text
         Dim iMultiplier As Integer
-        iMultiplier = CInt(txtPriceMultiplier.Text)
+        Dim iBuffCharge As Integer = 20
         Dim dblTotalCharge As Decimal
-        dblTotalCharge = String.Format("{0:C}", (dblBasePrice * iMultiplier))
+        iMultiplier = CInt(txtPriceMultiplier.Text)
+
+        Dim lblBasePrice As Label = fvServicePrice.FindControl("ServicePriceLabel")
+        If Not IsNothing(lblBasePrice) Then
+            dblBasePrice = CDec(lblBasePrice.Text)
+        Else
+            dblBasePrice = 0
+        End If
+
+
+        Select Case sServiceSelected
+
+            Case = "New Car Panel Buff"
+                dblTotalCharge = CDec(lblBasePrice.Text) * iMultiplier
+            Case = "Pre-owned Panel Buff"
+                dblTotalCharge = CDec(lblBasePrice.Text) * iMultiplier
+
+            Case Else
+
+                lblAdderCharge.Text = CStr((iBuffCharge * iMultiplier))
+
+                dblTotalCharge = String.Format("{0:C}", (dblBasePrice) + CInt(lblAdderCharge.Text))
+
+        End Select
 
         lblTotalCharge.Text = dblTotalCharge
 
@@ -131,5 +150,17 @@ Public Class Create
         ddEmployee.DataBind()
 
 
+    End Sub
+
+    Protected Sub cbPanelBuff_CheckedChanged(sender As Object, e As EventArgs) Handles cbPanelBuff.CheckedChanged
+        If cbPanelBuff.Checked = True Then
+            'show the panel buff adder options
+
+            PanelBuffPriceMultiplierRow.Visible = True
+        Else
+            'hide the panel buff adder options
+            PanelBuffPriceMultiplierRow.Visible = False
+
+        End If
     End Sub
 End Class

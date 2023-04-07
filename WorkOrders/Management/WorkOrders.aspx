@@ -47,10 +47,10 @@
         </tr>
     </table>
 
-    
-    <div id="table" style="overflow:scroll">
 
-        <asp:GridView class="table" ID="gvOrdersToEdit" runat="server" DataSourceID ="odsOrdersToEdit" AutoGenerateColumns="False" DataKeyNames="WorkOrderID" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" CssClass="table-condensed" AllowSorting="True">
+    <div class="ex1">
+
+        <asp:GridView  ID="gvOrdersToEdit" runat="server" DataSourceID ="odsOrdersToEdit" AutoGenerateColumns="False" DataKeyNames="WorkOrderID" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" CssClass="table-condensed" AllowSorting="True" Height="250px" AllowPaging="True" PageSize="15" >
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
                 <asp:templatefield HeaderText="Select">
@@ -84,17 +84,6 @@
 
                 </asp:templatefield>
 
-                <asp:templatefield HeaderText="Qty"  >
-                    <ItemTemplate>
-                        <asp:Label ID="lblQty" runat="server" Text='<%# Eval("Qty") %>'></asp:Label>
-                    </ItemTemplate>
-
-                    <EditItemTemplate>
-                         
-                    </EditItemTemplate>
-
-                </asp:templatefield>
-               
                 <asp:templatefield HeaderText="Status"  >
 
                     <ItemTemplate>
@@ -143,7 +132,5 @@
         </asp:ObjectDataSource>
   
     </div>
-
-    </table>
 
 </asp:Content>
