@@ -125,6 +125,7 @@
                         <a href="/Reports/Queue">Queue</a>
                         <a href="/Reports/Performance">Performance</a>
                         <a href="/Reports/VinHistory">Vin History</a>
+                        <a href="/Reports/Financials/FinancialReports">Invoice Trends</a>
                       </div>
                     </div>
 
