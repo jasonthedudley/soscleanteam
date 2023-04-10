@@ -216,6 +216,7 @@
                     <asp:BoundField DataField="Date Recieved" HeaderText="Date Recieved" SortExpression="Date Recieved" DataFormatString="{0:d}" />
                     <asp:BoundField DataField="CompleteDate" DataFormatString="{0:d}" HeaderText="Date Complete" SortExpression="CompleteDate" />
                     <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
+                    <asp:BoundField DataField="Mileage" HeaderText="Mileage" />
 
                 </Columns>
                 <EditRowStyle BackColor="#999999" />
