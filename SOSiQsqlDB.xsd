@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SOSiQDevConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SOSiQDevConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SOSiQDevConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SOSiQProdConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SOSiQProdConn (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SOSiQProdConn.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeActiveEmployeesBySiteTableAdapter" GeneratorDataComponentClassName="ShowMeActiveEmployeesBySiteTableAdapter" Name="ShowMeActiveEmployeesBySite" UserDataComponentName="ShowMeActiveEmployeesBySiteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeActiveEmployeesBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetEmployees" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetEmployees" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetEmployees" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeActiveEmployeesBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetEmployees" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetEmployees" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetEmployees" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeActiveEmployeesBySite</CommandText>
@@ -34,7 +34,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeThePricebyLocationIDAndServiceIDTableAdapter" GeneratorDataComponentClassName="ShowMeThePricebyLocationIDAndServiceIDTableAdapter" Name="ShowMeThePricebyLocationIDAndServiceID" UserDataComponentName="ShowMeThePricebyLocationIDAndServiceIDTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricebyLocationIDAndServiceID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetPrice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetPrice" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricebyLocationIDAndServiceID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetPrice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetPrice" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeThePricebyLocationIDAndServiceID</CommandText>
@@ -54,7 +54,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheRatingsTableAdapter" GeneratorDataComponentClassName="ShowMeTheRatingsTableAdapter" Name="ShowMeTheRatings" UserDataComponentName="ShowMeTheRatingsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheRatings" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetRatings" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetRatings" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetRatings" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheRatings" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetRatings" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetRatings" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetRatings" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheRatings</CommandText>
@@ -74,7 +74,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheServicesAndPricesWithIDbyLocationTableAdapter" GeneratorDataComponentClassName="ShowMeTheServicesAndPricesWithIDbyLocationTableAdapter" Name="ShowMeTheServicesAndPricesWithIDbyLocation" UserDataComponentName="ShowMeTheServicesAndPricesWithIDbyLocationTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheServicesAndPricesWithIDbyLocation" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheServicesAndPricesWithIDbyLocation" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheServicesAndPricesWithIDbyLocation</CommandText>
@@ -97,7 +97,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeAndUserAndSiteTableAdapter" GeneratorDataComponentClassName="EmployeeAndUserAndSiteTableAdapter" Name="EmployeeAndUserAndSite" UserDataComponentName="EmployeeAndUserAndSiteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.EmployeeAndUserAndSite" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.EmployeeAndUserAndSite" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT UserName, UserID, EmployeeID, CustomerID, SiteName FROM dbo.EmployeeAndUserAndSite</CommandText>
@@ -117,7 +117,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheSiteOfTheCurrentUserTableAdapter" GeneratorDataComponentClassName="ShowMeTheSiteOfTheCurrentUserTableAdapter" Name="ShowMeTheSiteOfTheCurrentUser" UserDataComponentName="ShowMeTheSiteOfTheCurrentUserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheSiteOfTheCurrentUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheSiteOfTheCurrentUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheSiteOfTheCurrentUser</CommandText>
@@ -137,7 +137,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeThePricebyLocationIDAndServiceID1TableAdapter" GeneratorDataComponentClassName="ShowMeThePricebyLocationIDAndServiceID1TableAdapter" Name="ShowMeThePricebyLocationIDAndServiceID1" UserDataComponentName="ShowMeThePricebyLocationIDAndServiceID1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricebyLocationIDAndServiceID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetPrice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetPrice" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricebyLocationIDAndServiceID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetPrice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetPrice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetPrice" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="true">
                     <CommandText>dbo.ShowMeThePricebyLocationIDAndServiceID</CommandText>
@@ -157,7 +157,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WorkOrderTableAdapter" GeneratorDataComponentClassName="WorkOrderTableAdapter" Name="WorkOrder" UserDataComponentName="WorkOrderTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.SelectWorkOrder" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.SelectWorkOrder" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.CreateNewWorkOrder</CommandText>
@@ -232,7 +232,7 @@
               <Mapping SourceColumn="Qtyofpanelsbuffed" DataSetColumn="Qtyofpanelsbuffed" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.GetWoStatus" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetWoStatus" GetMethodModifier="Public" GetMethodName="GetWoStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetWoStatus" UserSourceName="GetWoStatus">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.GetWoStatus" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetWoStatus" GetMethodModifier="Public" GetMethodName="GetWoStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetWoStatus" UserSourceName="GetWoStatus">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetWoStatus</CommandText>
@@ -247,7 +247,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewOrdersReadyForInvoiceTableAdapter" GeneratorDataComponentClassName="ViewOrdersReadyForInvoiceTableAdapter" Name="ViewOrdersReadyForInvoice" UserDataComponentName="ViewOrdersReadyForInvoiceTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrdersReadyForInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetOrdersReadyForInvoice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetOrdersReadyForInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetOrdersReadyForInvoice" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrdersReadyForInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetOrdersReadyForInvoice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetOrdersReadyForInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetOrdersReadyForInvoice" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ViewOrdersReadyForInvoice</CommandText>
@@ -282,7 +282,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CreateInvoiceTableAdapter" GeneratorDataComponentClassName="CreateInvoiceTableAdapter" Name="CreateInvoice" UserDataComponentName="CreateInvoiceTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrdersReadyForInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrdersReadyForInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.CreateInvoice</CommandText>
@@ -328,7 +328,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheInvoiceTableAdapter" GeneratorDataComponentClassName="ShowMeTheInvoiceTableAdapter" Name="ShowMeTheInvoice" UserDataComponentName="ShowMeTheInvoiceTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="ShowInvoice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="ShowInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ShowInvoice" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheInvoice" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="ShowInvoice" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="ShowInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ShowInvoice" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheInvoice</CommandText>
@@ -376,7 +376,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeWorkOrdersBySiteToEditTableAdapter" GeneratorDataComponentClassName="ShowMeWorkOrdersBySiteToEditTableAdapter" Name="ShowMeWorkOrdersBySiteToEdit" UserDataComponentName="ShowMeWorkOrdersBySiteToEditTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeWorkOrdersBySiteToEdit" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeWorkOrdersBySiteToEdit" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeWorkOrdersBySiteToEdit</CommandText>
@@ -411,7 +411,7 @@
               <Mapping SourceColumn="QtyOfPanelsBuffed" DataSetColumn="QtyOfPanelsBuffed" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeFilteredOrdersBySiteToEdit" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillByFilter" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFilter" GeneratorSourceName="FillByFilter" GetMethodModifier="Public" GetMethodName="GetDataByFilter" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFilter" UserSourceName="FillByFilter">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeFilteredOrdersBySiteToEdit" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillByFilter" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFilter" GeneratorSourceName="FillByFilter" GetMethodModifier="Public" GetMethodName="GetDataByFilter" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFilter" UserSourceName="FillByFilter">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeFilteredOrdersBySiteToEdit</CommandText>
@@ -429,7 +429,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheWorkOrderStatusesTableAdapter" GeneratorDataComponentClassName="ShowMeTheWorkOrderStatusesTableAdapter" Name="ShowMeTheWorkOrderStatuses" UserDataComponentName="ShowMeTheWorkOrderStatusesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkOrderStatuses" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetStatuses" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetStatuses" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetStatuses" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkOrderStatuses" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetStatuses" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetStatuses" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetStatuses" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheWorkOrderStatuses</CommandText>
@@ -449,7 +449,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewOrderForChangeTableAdapter" GeneratorDataComponentClassName="ViewOrderForChangeTableAdapter" Name="ViewOrderForChange" UserDataComponentName="ViewOrderForChangeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrderForChange" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetOrder" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetOrder" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetOrder" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ViewOrderForChange" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetOrder" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetOrder" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetOrder" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ViewOrderForChange</CommandText>
@@ -486,7 +486,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditorTableAdapter" GeneratorDataComponentClassName="ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditorTableAdapter" Name="ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditor" UserDataComponentName="ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditor" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditor" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheCurrentTextAndValueForTheDesignatedTableForADropDownOrderEditor</CommandText>
@@ -514,7 +514,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheInvoicesBySiteTableAdapter" GeneratorDataComponentClassName="ShowMeTheInvoicesBySiteTableAdapter" Name="ShowMeTheInvoicesBySite" UserDataComponentName="ShowMeTheInvoicesBySiteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheInvoicesBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheInvoicesBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheInvoicesBySite</CommandText>
@@ -556,7 +556,7 @@
               <Mapping SourceColumn="WorkOrder Notes" DataSetColumn="WorkOrder Notes" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.EditInvoiceView" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.EditInvoiceView" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.EditInvoiceView</CommandText>
@@ -567,7 +567,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheInvoicesBySiteByDateRange" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillByDateRange" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDateRange" GeneratorSourceName="FillByDateRange" GetMethodModifier="Public" GetMethodName="GetDataByDateRange" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDateRange" UserSourceName="FillByDateRange">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheInvoicesBySiteByDateRange" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillByDateRange" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDateRange" GeneratorSourceName="FillByDateRange" GetMethodModifier="Public" GetMethodName="GetDataByDateRange" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDateRange" UserSourceName="FillByDateRange">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="true">
                     <CommandText>dbo.ShowMeTheInvoicesBySiteByDateRange</CommandText>
@@ -581,7 +581,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.MarkInvoicesAsPaid" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MarkInvoicesAsPaid" Modifier="Public" Name="MarkInvoicesAsPaid" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MarkInvoicesAsPaid">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.MarkInvoicesAsPaid" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MarkInvoicesAsPaid" Modifier="Public" Name="MarkInvoicesAsPaid" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="MarkInvoicesAsPaid">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.MarkInvoicesAsPaid</CommandText>
@@ -597,7 +597,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InvoiceStatusTableAdapter" GeneratorDataComponentClassName="InvoiceStatusTableAdapter" Name="InvoiceStatus" UserDataComponentName="InvoiceStatusTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheInvoiceStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="ShowMeTheInvoiceStatus" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="ShowMeTheInvoiceStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ShowMeTheInvoiceStatus" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheInvoiceStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="ShowMeTheInvoiceStatus" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="ShowMeTheInvoiceStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ShowMeTheInvoiceStatus" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheInvoiceStatus</CommandText>
@@ -616,7 +616,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeTableAdapter" GeneratorDataComponentClassName="EmployeeTableAdapter" Name="Employee" UserDataComponentName="EmployeeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectEmpIDbyUserName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectEmpIDbyUserName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectEmpIDbyUserName</CommandText>
@@ -635,7 +635,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheTimeClockTableTableAdapter" GeneratorDataComponentClassName="ShowMeTheTimeClockTableTableAdapter" Name="ShowMeTheTimeClockTable" UserDataComponentName="ShowMeTheTimeClockTableTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheTimeClockTable" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheTimeClockTable" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.InsertEmployeePunch</CommandText>
@@ -668,7 +668,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SelectEmpIDbyUserNameTableAdapter" GeneratorDataComponentClassName="SelectEmpIDbyUserNameTableAdapter" Name="SelectEmpIDbyUserName" UserDataComponentName="SelectEmpIDbyUserNameTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectEmpIDbyUserName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectEmpIDbyUserName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectEmpIDbyUserName</CommandText>
@@ -687,7 +687,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeClockStatusTableAdapter" GeneratorDataComponentClassName="EmployeeClockStatusTableAdapter" Name="EmployeeClockStatus" UserDataComponentName="EmployeeClockStatusTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.EmployeeClockStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.EmployeeClockStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.EmployeeClockStatus</CommandText>
@@ -707,7 +707,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeRoleTableAdapter" GeneratorDataComponentClassName="EmployeeRoleTableAdapter" Name="EmployeeRole" UserDataComponentName="EmployeeRoleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectRole" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectRole" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectRole</CommandText>
@@ -727,7 +727,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeePayTableAdapter" GeneratorDataComponentClassName="EmployeePayTableAdapter" Name="EmployeePay" UserDataComponentName="EmployeePayTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectPayTypes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectPayTypes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectPayTypes</CommandText>
@@ -747,7 +747,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerTableAdapter" GeneratorDataComponentClassName="CustomerTableAdapter" Name="Customer" UserDataComponentName="CustomerTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectLocations" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectLocations" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectLocations</CommandText>
@@ -766,7 +766,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SelectAllEmployeesWithDetailsTableAdapter" GeneratorDataComponentClassName="SelectAllEmployeesWithDetailsTableAdapter" Name="SelectAllEmployeesWithDetails" UserDataComponentName="SelectAllEmployeesWithDetailsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.SelectAllEmployeesWithDetails" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.SelectAllEmployeesWithDetails" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.InsertEmployee</CommandText>
@@ -811,7 +811,7 @@
               <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.selectemployeesbysite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBySiteName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySiteName" GeneratorSourceName="FillBySiteName" GetMethodModifier="Public" GetMethodName="GetDataBySiteName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySiteName" UserSourceName="FillBySiteName">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.selectemployeesbysite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBySiteName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySiteName" GeneratorSourceName="FillBySiteName" GetMethodModifier="Public" GetMethodName="GetDataBySiteName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySiteName" UserSourceName="FillBySiteName">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.selectemployeesbysite</CommandText>
@@ -822,7 +822,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.UpdateEmployee" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateEmployee" Modifier="Public" Name="UpdateEmployee" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateEmployee">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.UpdateEmployee" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateEmployee" Modifier="Public" Name="UpdateEmployee" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateEmployee">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.UpdateEmployee</CommandText>
@@ -847,7 +847,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheEmployeeStatusOptionsTableAdapter" GeneratorDataComponentClassName="ShowMeTheEmployeeStatusOptionsTableAdapter" Name="ShowMeTheEmployeeStatusOptions" UserDataComponentName="ShowMeTheEmployeeStatusOptionsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeeStatusOptions" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeeStatusOptions" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheEmployeeStatusOptions</CommandText>
@@ -866,7 +866,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheEmployeesForUpdateTableAdapter" GeneratorDataComponentClassName="ShowMeTheEmployeesForUpdateTableAdapter" Name="ShowMeTheEmployeesForUpdate" UserDataComponentName="ShowMeTheEmployeesForUpdateTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeesForUpdate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeesForUpdate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheEmployeesForUpdate</CommandText>
@@ -918,7 +918,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheWorkOrdersForClockingTableAdapter" GeneratorDataComponentClassName="ShowMeTheWorkOrdersForClockingTableAdapter" Name="ShowMeTheWorkOrdersForClocking" UserDataComponentName="ShowMeTheWorkOrdersForClockingTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkOrdersForClocking" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkOrdersForClocking" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheWorkOrdersForClocking</CommandText>
@@ -946,7 +946,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WorkOrderHasEmployeePunchesTableAdapter" GeneratorDataComponentClassName="WorkOrderHasEmployeePunchesTableAdapter" Name="WorkOrderHasEmployeePunches" UserDataComponentName="WorkOrderHasEmployeePunchesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.GetWorkOrderPunches" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.GetWorkOrderPunches" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.InsertWorkOrderPunches</CommandText>
@@ -981,7 +981,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeFullViewTableAdapter" GeneratorDataComponentClassName="EmployeeFullViewTableAdapter" Name="EmployeeFullView" UserDataComponentName="EmployeeFullViewTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheTeamBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheTeamBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheTeamBySite</CommandText>
@@ -1005,7 +1005,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheWorkLogTableAdapter" GeneratorDataComponentClassName="ShowMeTheWorkLogTableAdapter" Name="ShowMeTheWorkLog" UserDataComponentName="ShowMeTheWorkLogTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkLog" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheWorkLog" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheWorkLog</CommandText>
@@ -1033,7 +1033,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeThePayPeriodTableTableAdapter" GeneratorDataComponentClassName="ShowMeThePayPeriodTableTableAdapter" Name="ShowMeThePayPeriodTable" UserDataComponentName="ShowMeThePayPeriodTableTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePayPeriodTable" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePayPeriodTable" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeThePayPeriodTable</CommandText>
@@ -1056,7 +1056,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewWorkOrderQueueTableAdapter" GeneratorDataComponentClassName="ViewWorkOrderQueueTableAdapter" Name="ViewWorkOrderQueue" UserDataComponentName="ViewWorkOrderQueueTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeOrdersInQueue" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeOrdersInQueue" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeOrdersInQueue</CommandText>
@@ -1089,7 +1089,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeThePricesAndCommisionsBySiteTableAdapter" GeneratorDataComponentClassName="ShowMeThePricesAndCommisionsBySiteTableAdapter" Name="ShowMeThePricesAndCommisionsBySite" UserDataComponentName="ShowMeThePricesAndCommisionsBySiteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricesAndCommisionsBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePricesAndCommisionsBySite" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeThePricesAndCommisionsBySite</CommandText>
@@ -1111,7 +1111,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheEmployeeTimeStampsTableAdapter" GeneratorDataComponentClassName="ShowMeTheEmployeeTimeStampsTableAdapter" Name="ShowMeTheEmployeeTimeStamps" UserDataComponentName="ShowMeTheEmployeeTimeStampsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeeTimeStamps" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheEmployeeTimeStamps" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheEmployeeTimeStamps</CommandText>
@@ -1135,7 +1135,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeThePunchTypesTableAdapter" GeneratorDataComponentClassName="ShowMeThePunchTypesTableAdapter" Name="ShowMeThePunchTypes" UserDataComponentName="ShowMeThePunchTypesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePunchTypes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeThePunchTypes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeThePunchTypes</CommandText>
@@ -1154,7 +1154,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeStatsForLocalPageTableAdapter" GeneratorDataComponentClassName="ShowMeStatsForLocalPageTableAdapter" Name="ShowMeStatsForLocalPage" UserDataComponentName="ShowMeStatsForLocalPageTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeStatsForLocalPage" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeStatsForLocalPage" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeStatsForLocalPage</CommandText>
@@ -1177,7 +1177,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeUsersAndEmployeeDetailsTableAdapter" GeneratorDataComponentClassName="ShowMeUsersAndEmployeeDetailsTableAdapter" Name="ShowMeUsersAndEmployeeDetails" UserDataComponentName="ShowMeUsersAndEmployeeDetailsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeUsersAndEmployeeDetails" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeUsersAndEmployeeDetails" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeUsersAndEmployeeDetails</CommandText>
@@ -1202,7 +1202,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheListOfLocationsTableAdapter" GeneratorDataComponentClassName="ShowMeTheListOfLocationsTableAdapter" Name="ShowMeTheListOfLocations" UserDataComponentName="ShowMeTheListOfLocationsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheListOfLocations" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheListOfLocations" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheListOfLocations</CommandText>
@@ -1221,7 +1221,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeAvailableUsersTableAdapter" GeneratorDataComponentClassName="ShowMeAvailableUsersTableAdapter" Name="ShowMeAvailableUsers" UserDataComponentName="ShowMeAvailableUsersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeAvailableUsers" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeAvailableUsers" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeAvailableUsers</CommandText>
@@ -1241,7 +1241,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheAppRolesTableAdapter" GeneratorDataComponentClassName="ShowMeTheAppRolesTableAdapter" Name="ShowMeTheAppRoles" UserDataComponentName="ShowMeTheAppRolesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheAppRoles" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheAppRoles" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheAppRoles</CommandText>
@@ -1263,7 +1263,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TeamWorkOrderQueueTableAdapter" GeneratorDataComponentClassName="TeamWorkOrderQueueTableAdapter" Name="TeamWorkOrderQueue" UserDataComponentName="TeamWorkOrderQueueTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.TeamWorkOrderQueue" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.TeamWorkOrderQueue" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.TeamWorkOrderQueue</CommandText>
@@ -1295,7 +1295,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowTeamClockStatusTableAdapter" GeneratorDataComponentClassName="ShowTeamClockStatusTableAdapter" Name="ShowTeamClockStatus" UserDataComponentName="ShowTeamClockStatusTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowTeamClockStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowTeamClockStatus" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowTeamClockStatus</CommandText>
@@ -1319,7 +1319,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheVinHistoryTableAdapter" GeneratorDataComponentClassName="ShowMeTheVinHistoryTableAdapter" Name="ShowMeTheVinHistory" UserDataComponentName="ShowMeTheVinHistoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheVinHistory" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheVinHistory" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheVinHistory</CommandText>
@@ -1345,7 +1345,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheCarHistoryTableAdapter" GeneratorDataComponentClassName="ShowMeTheCarHistoryTableAdapter" Name="ShowMeTheCarHistory" UserDataComponentName="ShowMeTheCarHistoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheCarHistory" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowMeTheCarHistory" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheCarHistory</CommandText>
@@ -1373,7 +1373,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowPauseReasonsTableAdapter" GeneratorDataComponentClassName="ShowPauseReasonsTableAdapter" Name="ShowPauseReasons" UserDataComponentName="ShowPauseReasonsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQDev.dbo.ShowPauseReasons" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQDev.dbo.ShowPauseReasons" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowPauseReasons</CommandText>
@@ -1392,7 +1392,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CorporateInvoiceViewTableAdapter" GeneratorDataComponentClassName="CorporateInvoiceViewTableAdapter" Name="CorporateInvoiceView" UserDataComponentName="CorporateInvoiceViewTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.CorporateInvoiceView" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.CorporateInvoiceView" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.CorporateInvoiceView</CommandText>
@@ -1425,7 +1425,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShowMeTheMoneyTableAdapter" GeneratorDataComponentClassName="ShowMeTheMoneyTableAdapter" Name="ShowMeTheMoney" UserDataComponentName="ShowMeTheMoneyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SOSiQDevConnectionString (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheMoney" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SOSiQProdConn (Web.config)" DbObjectName="SOSiQProd.dbo.ShowMeTheMoney" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ShowMeTheMoney</CommandText>

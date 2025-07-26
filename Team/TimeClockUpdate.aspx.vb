@@ -12,7 +12,7 @@ Public Class TimeClockUpdate
 
     End Sub
     Public Sub LoadGridView()
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Dim iEmpID As Integer = ddlTeamMembers.SelectedValue
         Dim ViewDate As Date = txtDate.Text
@@ -65,7 +65,7 @@ Public Class TimeClockUpdate
 
         Dim iPunchType As Integer = cPunchType.SelectedValue
 
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Try
 
@@ -115,7 +115,7 @@ Public Class TimeClockUpdate
 
         Dim iPunchType As Integer = cPunchType.SelectedIndex
 
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Try
 
@@ -174,7 +174,7 @@ Public Class TimeClockUpdate
 
         Dim iPunchId As Integer = CInt(cPunchId.Text)
 
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Try
 

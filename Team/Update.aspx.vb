@@ -14,7 +14,7 @@ Public Class Update
     End Sub
 
     Public Sub LoadGridView()
-        sConnection = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        sConnection = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Using cn As New SqlConnection(sConnection)
 
@@ -55,7 +55,7 @@ Public Class Update
 
     Protected Sub gvUpdateEmployees_RowUpdating(sender As Object, e As GridViewUpdateEventArgs)
 
-        sConnection = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        sConnection = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Dim row As GridViewRow = gvUpdateEmployees.Rows(e.RowIndex)
 

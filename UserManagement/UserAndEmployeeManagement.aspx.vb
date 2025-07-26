@@ -15,7 +15,7 @@ Public Class UserAndEmployeeManagement
     End Sub
 
     Public Sub LoadGridView()
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Using cn As New SqlConnection(sConnection)
 
@@ -59,7 +59,7 @@ Public Class UserAndEmployeeManagement
         Dim iUser As Integer = 0
         Dim gUser As Guid = Nothing
 
-        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQDevConnectionString").ConnectionString
+        Dim sConnection As String = ConfigurationManager.ConnectionStrings("SOSiQProdConn").ConnectionString
 
         Dim row As GridViewRow = gvUserManagement.Rows(e.RowIndex)
 
