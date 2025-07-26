@@ -3,26 +3,46 @@
 
     Public sSiteID As String = ""
     Public sUserName As String = ""
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+    Protected lblSiteID As Label
+    Protected lblSiteName As Label
+    Protected lblEmpId As Label
+    Protected lblMessage As Label
 
+    Protected Sub Page_Load(ByVal sender As Object, e As EventArgs) Handles Me.Load
         If System.Web.HttpContext.Current.User.Identity.IsAuthenticated Then
+            sUserName = Membership.GetUser()?.UserName
+            If Not String.IsNullOrEmpty(sUserName) Then
+                Try
+                    ' Initialize TableAdapter for site data
+                    Dim taSiteData As New SOSiQsqlDBTableAdapters.ShowMeTheSiteOfTheCurrentUserTableAdapter
+                    Dim dtSiteData As New SOSiQsqlDB.ShowMeTheSiteOfTheCurrentUserDataTable
+                    dtSiteData = taSiteData.GetData(sUserName)
 
-            sUserName = Membership.GetUser().UserName
-            'declare a new instance of the appropriate tableadapter 
-            Dim taSiteData As New SOSiQsqlDBTableAdapters.ShowMeTheSiteOfTheCurrentUserTableAdapter
-            'then declare a new datatable to store the results in
-            Dim dtSiteData As New DataTable
-            'then run the getdata method from the table adapter to get that yummy data - using the public variable sUsername
-            dtSiteData = taSiteData.GetData(sUserName)
-            'then assign them data joints to the appropriate fields on the page and BAM!  we are cooking with peanut butter
-            Dim taEmployeeByUserName As New SOSiQsqlDBTableAdapters.SelectEmpIDbyUserNameTableAdapter
-            Dim dtEmpId As New DataTable
-            dtEmpId = taEmployeeByUserName.GetData(sUserName)
-            lblSiteID.Text = dtSiteData.Rows(0)(0).ToString
-            lblSiteName.Text = dtSiteData.Rows(0)(1).ToString
-            lblEmpId.Text = dtEmpId.Rows(0)(0).ToString
+                    If dtSiteData IsNot Nothing AndAlso dtSiteData.Rows.Count > 0 Then
+                        lblSiteID.Text = dtSiteData.Rows(0).Item(0).ToString()  ' First column (e.g., SiteID)
+                        lblSiteName.Text = dtSiteData.Rows(0).Item(1).ToString()  ' Second column (e.g., SiteName)
+                    Else
+                        lblMessage.Text = "No site data found for user: " & sUserName
+                    End If
+
+                    ' Initialize TableAdapter for employee data
+                    Dim taEmployeeByUserName As New SOSiQsqlDBTableAdapters.SelectEmpIDbyUserNameTableAdapter
+                    Dim dtEmpId As New SOSiQsqlDB.SelectEmpIDbyUserNameDataTable
+                    dtEmpId = taEmployeeByUserName.GetData(sUserName)
+
+                    If dtEmpId IsNot Nothing AndAlso dtEmpId.Rows.Count > 0 Then
+                        lblEmpId.Text = dtEmpId.Rows(0).Item(0).ToString()  ' First column (e.g., EmployeeID)
+                    Else
+                        lblEmpId.Text = "No employee ID found for user: " & sUserName
+                    End If
+                Catch ex As Exception
+                    lblMessage.Text = "Error loading data: " & ex.Message
+                End Try
+            Else
+                lblMessage.Text = "Username not available."
+            End If
+        Else
+            Response.Redirect("~/default.aspx")  ' Redirect to login if not authenticated
         End If
-
-
     End Sub
 End Class
